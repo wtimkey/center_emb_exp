@@ -218,7 +218,8 @@ function make_slides(f) {
                         "rt": this.mazeResults[i][0] - this.mazeResults[i][1],
                         "correct": this.correct[i],
                         "region": this.regions[i],
-                        "alt": this.alts[i]
+                        "alt": this.alts[i],
+			"order": this.order[i]
                     })
                     console.log(byWords[byWords.length - 1]);
                 }
