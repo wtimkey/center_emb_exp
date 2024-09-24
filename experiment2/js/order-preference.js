@@ -213,14 +213,19 @@ function make_slides(f) {
                 console.log(this.mazeResults);
                 byWords = [];
                 for (i = 0; i < this.words.length; i++) {
+                    switch_side = false;
+                    if(i > 0 & (this.order[i-1] != this.order[i])){
+                    	switch_side = true;
+                    }
                     byWords.push({
                         "word": this.words[i],
                         "rt": this.mazeResults[i][0] - this.mazeResults[i][1],
                         "correct": this.correct[i],
                         "region": this.regions[i],
                         "alt": this.alts[i],
-			"order": this.order[i]
-                    })
+                        "order": this.order[i],
+                        "switch_side":switch_side
+                        })
                     console.log(byWords[byWords.length - 1]);
                 }
                 console.log(byWords);
