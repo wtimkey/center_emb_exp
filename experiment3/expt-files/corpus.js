@@ -86,29 +86,60 @@ if (!Array.prototype.includes) {
 	  critical = [];
 	   
 	   conditionAssignment = [];
-	   conditionsCounts = [0, 0, 0, 0];
-	  if(Math.random() > 0.5) {
-		  cond1 = 3;
-		  cond2 = -1;
-		  cond3 = 0;
-		  cond4 = 2;
-	  } else {
-		  cond1 = 0;
+	   conditionsCounts = [0, 0, 0, 0, 0, 0];
+	  condOrderRand = Math.random();
+	  condSignRand = Math.random();
+	  if(condOrderRand > 0.66667) {
+		  cond1 = -3;
 		  cond2 = 2;
+		  cond3 = -1;
+		  cond4 = 3;
+		  cond5 = -2;
+		  cond6 = 1;
+	  } else if(condOrderRand > 0.33333) {
+		  cond1 = 1;
+		  cond2 = -2;
 		  cond3 = 3;
 		  cond4 = -1;
+		  cond5 = 2;
+		  cond6 = -3;
 	  }
-  //     for(var i=0; i<3; i++) {
-			  conditionAssignment.push(1)
-			  conditionAssignment.push(cond1)
-			  conditionAssignment.push(cond3)
-			  conditionAssignment.push(cond2)
-			  conditionAssignment.push(cond4)
-			  conditionAssignment.push(cond1)
-			  conditionAssignment.push(cond2)
-			  conditionAssignment.push(cond3)
-			  conditionAssignment.push(cond4)
-			  conditionAssignment.push(1)
+	  else {
+		  cond1 = 2;
+		  cond2 = -1;
+		  cond3 = 3;
+		  cond4 = -2;
+		  cond5 = 1;
+		  cond6 = -3;
+	  }
+	  if(condSignRand > 0.5) {
+		  conditionAssignment.push(cond1)
+		  conditionAssignment.push(cond2)
+		  conditionAssignment.push(cond3)
+		  conditionAssignment.push(cond4)
+		  conditionAssignment.push(cond5)
+		  conditionAssignment.push(cond6)
+		  conditionAssignment.push(-cond1)
+		  conditionAssignment.push(-cond2)
+		  conditionAssignment.push(-cond3)
+		  conditionAssignment.push(-cond4)
+		  conditionAssignment.push(-cond5)
+		  conditionAssignment.push(-cond6)
+	  }
+	  else {
+		  conditionAssignment.push(-cond1)
+		  conditionAssignment.push(-cond2)
+		  conditionAssignment.push(-cond3)
+		  conditionAssignment.push(-cond4)
+		  conditionAssignment.push(-cond5)
+		  conditionAssignment.push(-cond6)
+		  conditionAssignment.push(cond1)
+		  conditionAssignment.push(cond2)
+		  conditionAssignment.push(cond3)
+		  conditionAssignment.push(cond4)
+		  conditionAssignment.push(cond5)
+		  conditionAssignment.push(cond6)
+	  }
 	//   }
 	   console.log(conditionAssignment); 
 	  
@@ -483,10 +514,6 @@ if (!Array.prototype.includes) {
   }
   
   
-  
-  // Now specifically select the old continuations
-  //continuations = continuations.slice(0, 20);
-  
   continuationsChosen = _.shuffle(continuations);
   console.log(continuationsChosen);
   
@@ -557,107 +584,68 @@ if (!Array.prototype.includes) {
   for(i = 0; i<continuations.length; i++) {
 	  continuations[i][0].noun = topNouns[i];
 	  continuations[i][1].noun = topNouns[i];
-	  continuations[i][0].s = "The "+topNouns[i]+" "+continuations[i][0].s;
-	  continuations[i][1].s = "The "+topNouns[i]+" "+continuations[i][1].s;
-	  continuations[i][0].r = "REGION_D0 REGION_N0 "+continuations[i][0].r;
-	  continuations[i][1].r = "REGION_D0 REGION_N0 "+continuations[i][1].r;
+	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s;
+	  continuations[i][1].s = "The "+topNouns[i]+" was "+continuations[i][1].s;
+	  continuations[i][0].r = "REGION_D0 REGION_N0 REGION_W0"+continuations[i][0].r;
+	  continuations[i][1].r = "REGION_D0 REGION_N0 REGION_W0"+continuations[i][1].r;
 	  console.log(continuations[i]);
-	  if(conditionAssignment[i] < 2) {
+	  if(conditionAssignment[i] < 0) {
 		  item = continuations[i][0];
-		  if(conditionAssignment[i] == 0) { 
-				  item["condition"] = "critical_incompatible"
-		  } else if(conditionAssignment[i] == 1) {
-				  item["condition"] = "critical_NoSC" 
-		  } else if (conditionAssignment[i] == -1) {
-				  item["condition"] = "critical_SCRC_incompatible"
+		  if(conditionAssignment[i] == -1) { 
+				  item["condition"] = "critical_nohead_incompatible"
+		  } else if(conditionAssignment[i] == -2) {
+				  item["condition"] = "critical_single_incompatible" 
+		  } else if (conditionAssignment[i] == -3) {
+				  item["condition"] = "critical_double_incompatible"
 		  }
   
-		  distractors1 = continuations[i][0].a.split(" ");
-		  distractors2 = continuations[i][1].a.split(" ");
 		  words1 = continuations[i][0].s.split(" ")
 		  words2 = continuations[i][1].s.split(" ")
-		  distractors = [];
 		  regions = item.r.split(" ");
 		  item.distractor_condition = "none";
-		  for(j = 0; j<words2.length; j++) {
-			  if((!(continuations[i][0].item.includes("232"))) && j < regions.length && regions[j] == "REGION_3_0") {
-				  if(Math.random() > 0.5) {
-					  item.distractor_condition = "dist1";
-					  distractors.push(distractors1[j]);
-				  } else {
-					  item.distractor_condition = "dist2";
-					  distractors.push(distractors2[j]);
-				  }
-			  } else {
-				  distractors.push(distractors1[j]);
-			  }
-		  }
-		  item.a = distractors.join(" ");
+		  item.a = continuations[i][0].a;
 	  } else {
 		  item = continuations[i][1];
-		  if(conditionAssignment[i] == 2) {
-				item["condition"] = "critical_compatible"
-		  } else if(conditionAssignment[i] == 3) {
-			  item["condition"] = "critical_SCRC_compatible"
-		  } else {
-			  CRASH();
+		  if(conditionAssignment[i] == 1) { 
+				  item["condition"] = "critical_nohead_compatible"
+		  } else if(conditionAssignment[i] == 2) {
+				  item["condition"] = "critical_single_compatible" 
+		  } else if (conditionAssignment[i] == 3) {
+				  item["condition"] = "critical_double_compatible"
 		  }
-		  distractors1 = continuations[i][0].a.split(" ");
-		  distractors2 = continuations[i][1].a.split(" ");
 		  words1 = continuations[i][0].s.split(" ")
 		  words2 = continuations[i][1].s.split(" ")
-		  distractors = [];
 		  regions = item.r.split(" ");
 		  item.distractor_condition = "none";
-		  for(j = 0; j<words2.length; j++) {
-				   console.log(continuations[i][0]);
-				   if(!(continuations[i][0].item.includes("232"))) {
-					if(j < regions.length && regions[j] == "REGION_3_0") { // distractor on the critical verb
-					  if(Math.random() > 0.5) { // This random choice is taken over from the code of Study S5, but here distractors actually are matched across the compatibility manipulation, so the random choice plays no real role
-						   item.distractor_condition = "dist1";
-						   distractors.push(distractors1[j]);
-					  } else {
-						   item.distractor_condition = "dist2";
-						   distractors.push(distractors2[j]);
-					  }
-					} else if(j >= words1.length || words1[j] != words2[j]) { // distractor specific to this version
-					  distractors.push(distractors2[j]);
-					} else if(words2[j] == words1[j]) { // else, match across conditions
-					  distractors.push(distractors1[j]);
-					}
-				  } else {
-					if(j < regions.length && (words1[j] != words2[j]) || (j > 0 && words1[j-1] != words2[j-1])) { // distractor specific to this version
-					  distractors.push(distractors2[j]);
-					} else { // else, match across conditions
-					  distractors.push(distractors1[j]);
-					}
-				  }
-			  }
-			  item.a = distractors.join(" ");
+		  item.a = continuations[i][0].a
 		  }
   
 	  s_ = [];
 	  a_ = [];
 	  r_ = [];
-		  s = item.s.split(" ")
+	  s = item.s.split(" ")
 	  a = item.a.split(" ")
 	  r = item.r.split(" ")
 	  console.log(r);
 	  condition = item["condition"]
   
 	  for(j=0; j<s.length; j++) {
-		  if(condition == "critical_NoSC" && r[j].startsWith("REGION_0_")) {
-			  continue;
+		  if(condition.startsWith("critical_nohead")) {
+			  s_.push(s[j]);
+			  a_.push(a[j]);
+			  r_.push(r[j]);
 		  }
-		  if(condition == "critical_NoSC" && r[j].startsWith("REGION_2_")) {
-			  continue;
+		  else if(condition.startsWith("critical_single") && (!r[j].startsWith("REGION_W0")) && (!r[j].startsWith("REGION_1")) && (!r[j].startsWith("REGION_3"))) {
+			  s_.push(s[j]);
+			  a_.push(a[j]);
+			  r_.push(r[j]);
 		  }
-		  if(condition != "critical_SCRC_compatible" && condition != "critical_SCRC_incompatible" && r[j].startsWith("REGION_1_")) {
-			  continue;
+		  else if(condition.startsWith("critical_double") && (!r[j].startsWith("REGION_W0")) && (!r[j].startsWith("REGION_3"))) {
+			  s_.push(s[j]);
+			  a_.push(a[j]);
+			  r_.push(r[j]);
 		  }
-		  s_.push(s[j]);
-		  a_.push(a[j]);
-		  r_.push(r[j]);
+		  
 	  }
 	  item.s = s_.join(" ")
 	  item.a = a_.join(" ")
