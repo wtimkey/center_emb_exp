@@ -680,6 +680,10 @@ if (!Array.prototype.includes) {
 	  s = item.s.split(" ")
 	  a = item.a.split(" ")
 	  r = item.r.split(" ")
+	  itemNounFoils = nounsFoils[topNouns[i]].split(" ");
+	  a[1] = itemNounFoils[0]
+	  a[2] = itemNounFoils[1]
+
 	  console.log(r);
 	  condition = item["condition"]
   
@@ -701,9 +705,6 @@ if (!Array.prototype.includes) {
 		  }
 		  
 	  }
-	  itemNounFoils = nounsFoils[topNouns[i]].split(" ");
-	  a_[1] = itemNounFoils[0]
-	  a_[2] = itemNounFoils[1]
 	  item.s = s_.join(" ")
 	  item.a = a_.join(" ")
 	  item.r = r_.join(" ")
