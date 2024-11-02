@@ -586,8 +586,8 @@ if (!Array.prototype.includes) {
 	  continuations[i][1].noun = topNouns[i];
 	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s;
 	  continuations[i][1].s = "The "+topNouns[i]+" was "+continuations[i][1].s;
-	  continuations[i][0].r = "REGION_D0 REGION_N0 REGION_W0"+continuations[i][0].r;
-	  continuations[i][1].r = "REGION_D0 REGION_N0 REGION_W0"+continuations[i][1].r;
+	  continuations[i][0].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][0].r;
+	  continuations[i][1].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][1].r;
 	  console.log(continuations[i]);
 	  if(conditionAssignment[i] < 0) {
 		  item = continuations[i][0];
