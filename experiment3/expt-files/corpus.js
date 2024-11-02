@@ -148,10 +148,6 @@ if (!Array.prototype.includes) {
   nouns["CLAIM"] = []
   nouns["ACCUSATION"] = []
   nouns["FACT"] = []
-  nouns["HOPE"] = []
-  nouns["CHANCE"] = []
-  nouns["FEAR"] = []
-  nouns["PREDICTION"] = []
   
   // CLAIM: a claim whose truth or falsity is not presupposed.
   nouns["CLAIM"].push("assertion")
@@ -237,7 +233,6 @@ if (!Array.prototype.includes) {
   nounsByThatBiasOrder.push("admission")
   nounsByThatBiasOrder.push("disclosure")
   nounsByThatBiasOrder.push("confirmation")
-  //nounsByThatBiasOrder.push("guess")
   nounsByThatBiasOrder.push("remark")
   nounsByThatBiasOrder.push("news")
   nounsByThatBiasOrder.push("proof")
@@ -273,7 +268,6 @@ if (!Array.prototype.includes) {
   nounsByThatBiasOrder.push("sense")
   nounsByThatBiasOrder.push("suspicion")
   nounsByThatBiasOrder.push("assurance")
-  //nounsByThatBiasOrder.push("insinuation")
   nounsByThatBiasOrder.push("realization")
   nounsByThatBiasOrder.push("assertion")
   nounsByThatBiasOrder.push("impression")
@@ -282,6 +276,66 @@ if (!Array.prototype.includes) {
   nounsByThatBiasOrder.push("belief")
   nounsByThatBiasOrder.push("fact")
   
+  nounsFoils = {"assertion":"adulthood fat",
+				"assessment":"guaranteed glad",
+				"assumption":"installing pre",
+				"belief":"invest miss",
+				"claim":"apart pre",
+				"conclusion":"facilitate cent",
+				"feeling":"anymore pre",
+				"finding":"watched pre",
+				"idea":"gone wish",
+				"inkling":"spanned glad",
+				"news":"else pre",
+				"opinion":"anymore dad",
+				"perception":"positioned cent",
+				"presumption":"anymore glad",
+				"remark":"behave ice",
+				"reminder":"delivers mom",
+				"revelation":"accelerate pre",
+				"rumor":"edged feet",
+				"speculation":"researching feet",
+				"statement":"recommend mid",
+				"suggestion":"downloaded mid",
+				"theory":"ignore dad",
+				"view":"gone pre",
+				"assurance":"enforcing fat",
+				"message":"anymore pre",
+				"contention":"benefiting pre",
+				"impression":"facilitate sell",
+				"opinion":"anymore mid",
+				"sense":"apart cent",
+				"presumption":"warehousing join",
+				"revelation":"conversely cent",
+				"intuition":"optimized glad",
+				"conjecture":"benefiting pre",
+				"conviction":"accomplish else",
+				"thought":"anymore pre",
+				"conclusion":"accomplish foot",
+				"feeling":"anymore buy",
+				"finding":"letting pre",
+				"idea":"gone holy",
+				"indication":"accelerate holy",
+				"presumption":"researching cup",
+				"revelation":"conversely cent",
+				"rumor":"suing hair",
+				"speculation":"installing sell",
+				"guess":"yours pre",
+				"story":"apart hear",
+				"report":"anyway luck",
+				"allegation":"benefiting eat",
+				"accusation":"configured sell",
+				"insinuation":"benefiting eat", 
+				"complaint":"preparing feet",
+				"suspicion":"undergone pull",
+				"truth":"apart lose",
+				"fact":"else glad",
+				"reminder":"regulate fat",
+				"proof":"yours glad",
+				"realization":"documenting shut",
+				"observation":"encountered pre",
+				"understanding":"characterised cent",
+				"disclosure":"preferably cold"};
   
   
   
@@ -603,7 +657,7 @@ if (!Array.prototype.includes) {
 		  words2 = continuations[i][1].s.split(" ")
 		  regions = item.r.split(" ");
 		  item.distractor_condition = "none";
-		  item.a = continuations[i][0].a;
+		  
 	  } else {
 		  item = continuations[i][1];
 		  if(conditionAssignment[i] == 1) { 
@@ -617,9 +671,9 @@ if (!Array.prototype.includes) {
 		  words2 = continuations[i][1].s.split(" ")
 		  regions = item.r.split(" ");
 		  item.distractor_condition = "none";
-		  item.a = continuations[i][0].a
 		  }
-  
+
+	  item.a = continuations[i][0].a;
 	  s_ = [];
 	  a_ = [];
 	  r_ = [];
@@ -647,6 +701,9 @@ if (!Array.prototype.includes) {
 		  }
 		  
 	  }
+	  itemNounFoils = nounsFoils[topNouns[i]].split(" ");
+	  a_[1] = itemNounFoils[0]
+	  a_[2] = itemNounFoils[1]
 	  item.s = s_.join(" ")
 	  item.a = a_.join(" ")
 	  item.r = r_.join(" ")
