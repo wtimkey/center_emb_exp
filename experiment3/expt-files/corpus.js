@@ -303,7 +303,7 @@ if (!Array.prototype.includes) {
   
   continuations238 = []
   
-  for(i=0; i<18; i++) {
+  for(i=0; i<42; i++) {
 	  continuations238.push([]);
   }
   
