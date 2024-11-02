@@ -636,13 +636,13 @@ if (!Array.prototype.includes) {
 			  r_.push(r[j]);
 		  }
 		  else if(condition.startsWith("critical_single") && (!r[j].startsWith("REGION_W0")) && (!r[j].startsWith("REGION_1")) && (!r[j].startsWith("REGION_3"))) {
-			  s_.push(s[j]);
-			  a_.push(a[j]);
+			  s_.push(s[j].replace(",", ""));
+			  a_.push(a[j].replace(",", ""));
 			  r_.push(r[j]);
 		  }
 		  else if(condition.startsWith("critical_double") && (!r[j].startsWith("REGION_W0")) && (!r[j].startsWith("REGION_3"))) {
-			  s_.push(s[j]);
-			  a_.push(a[j]);
+			  s_.push(s[j].replace(",", ""));
+			  a_.push(a[j].replace(",", ""));
 			  r_.push(r[j]);
 		  }
 		  
