@@ -307,8 +307,8 @@ if (!Array.prototype.includes) {
   console.log("------------------------")
   console.log("TOP NOUNS BEFORE SLICING", topNouns);
   
-  topNouns1 = _.sample(topNouns.slice(0, 15), 10);
-  topNouns2 = _.sample(topNouns.slice(topNouns.length-15, topNouns.length), 10);
+  topNouns1 = _.sample(topNouns.slice(0, 15), 12);
+  topNouns2 = _.sample(topNouns.slice(topNouns.length-15, topNouns.length), 12);
   //topNouns2 = topNouns.slice(10, 20);
   
   
@@ -316,7 +316,7 @@ if (!Array.prototype.includes) {
   console.log(topNouns2);
   console.log("SELECTION");
   topNouns = [];
-  for(i=0; i<5; i++) {
+  for(i=0; i<6; i++) {
 	  selected1 = (Math.random() > 0.5) ? 2*i : 2*i+1;
 	  selected2 = (Math.random() > 0.5) ? 2*i : 2*i+1;
 	  console.log(selected1, selected2, topNouns1.length, topNouns2.length);
@@ -791,7 +791,7 @@ if (!Array.prototype.includes) {
   
   console.log("CRITICAL", criticalChosen);
   
-  fillersAndCritical = separatedShuffle(_.sample(fillers, 30), criticalChosen);
+  fillersAndCritical = separatedShuffle(_.sample(fillers, 36), criticalChosen);
   
   fullStimuli = _.shuffle(practice).concat(fillersAndCritical);
   
