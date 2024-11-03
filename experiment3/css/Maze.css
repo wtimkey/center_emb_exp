@@ -14,11 +14,14 @@
      float: center
 }
 .Maze-compq{
+     margin-top: 25px;
      background-color: white;
      padding-top: 10px;
+     padding-bottom: 10px;
      font-size: 120%;
      text-align: center;
-     float: center
+     float: center;
+     border: 2px solid red;
 }
 .Maze-arrow {
      background-color: white;
