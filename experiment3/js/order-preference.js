@@ -160,9 +160,11 @@ function make_slides(f) {
                         }
                         t.previousTime = time;
                         ++(t.currentWord);
-                        if (t.currentWord >= t.stoppingPoint) {
+                        if (t.currentWord == t.stoppingPoint-1) {
                             $(".Maze-counter").html(t.compq);
-                            //$(".Maze-counter").html("Correct! Press any key to continue.");
+                        }
+                        if (t.currentWord >= t.stoppingPoint) {
+                            $(".Maze-counter").html("Correct! Press any key to continue.");
                             $(".Maze-lword").hide();
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
