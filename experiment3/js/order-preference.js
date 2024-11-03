@@ -152,7 +152,7 @@ function make_slides(f) {
                                 $(".Maze-rword").hide();
                                 $(".Maze-larrow").hide();
                                 $(".Maze-rarrow").hide();
-                                $(".Maze-compq").hide();
+                                $(".Maze-compq").html("");
                                 t.currentWord = -1;
                                 return true;
                             } else if (correct == "yes") {
@@ -167,13 +167,12 @@ function make_slides(f) {
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
-                            $(".Maze-compq").hide();
+                            $(".Maze-compq").html("");
                             t.currentWord = -2;
                             return true;
                         }
                         t.showWord(t.currentWord);
                         if (t.currentWord == t.stoppingPoint-1) {
-                            $(".Maze-compq").show();
                             $(".Maze-compq").html(t.compq);
                         }
                         return false;
