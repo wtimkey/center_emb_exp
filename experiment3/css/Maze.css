@@ -13,6 +13,13 @@
      text-align: center;
      float: center
 }
+.Maze-compq{
+     background-color: white;
+     padding-top: 10px;
+     font-size: 120%;
+     text-align: center;
+     float: center
+}
 .Maze-arrow {
      background-color: white;
      padding-top: 0%;
