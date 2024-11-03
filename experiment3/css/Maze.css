@@ -22,6 +22,12 @@
      text-align: center;
      float: center;
 }
+.Maze-active-compq{
+     border: 2px solid red;
+}
+.Maze-inactive-compq{
+     border: 2px solid white;
+}
 .Maze-arrow {
      background-color: white;
      padding-top: 0%;
