@@ -160,9 +160,6 @@ function make_slides(f) {
                         }
                         t.previousTime = time;
                         ++(t.currentWord);
-                        if (t.currentWord == t.stoppingPoint-1) {
-                            $(".Maze-counter").html(t.compq);
-                        }
                         if (t.currentWord >= t.stoppingPoint) {
                             $(".Maze-counter").html("Correct! Press any key to continue.");
                             $(".Maze-lword").hide();
@@ -171,6 +168,9 @@ function make_slides(f) {
                             $(".Maze-rarrow").hide();
                             t.currentWord = -2;
                             return true;
+                        }
+                        if (t.currentWord == t.stoppingPoint-1) {
+                            $(".Maze-counter").html(t.compq);
                         }
                         t.showWord(t.currentWord);
                         return false;
