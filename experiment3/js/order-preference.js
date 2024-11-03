@@ -169,10 +169,10 @@ function make_slides(f) {
                             t.currentWord = -2;
                             return true;
                         }
+                        t.showWord(t.currentWord);
                         if (t.currentWord == t.stoppingPoint-1) {
                             $(".Maze-counter").html(t.compq);
                         }
-                        t.showWord(t.currentWord);
                         return false;
                     } else {
                         return true;
