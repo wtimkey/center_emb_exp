@@ -153,7 +153,7 @@ function make_slides(f) {
                                 $(".Maze-larrow").hide();
                                 $(".Maze-rarrow").hide();
                                 $(".Maze-compq").html("&nbsp;");
-                                $(".Maze-compq").css("border", "2px solid white;");
+                                $(".Maze-compq").addClass('Maze-inactive-compq').removeClass('Maze-active-compq');
                                 t.currentWord = -1;
                                 return true;
                             } else if (correct == "yes") {
@@ -169,14 +169,14 @@ function make_slides(f) {
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
                             $(".Maze-compq").html("&nbsp;");
-                            $(".Maze-compq").css("border", "2px solid white;");
+                            $(".Maze-compq").addClass('Maze-inactive-compq').removeClass('Maze-active-compq');
                             t.currentWord = -2;
                             return true;
                         }
                         t.showWord(t.currentWord);
                         if (t.currentWord == t.stoppingPoint-1) {
                             $(".Maze-compq").html(t.compq);
-                            $(".Maze-compq").css("border", "2px solid red;");
+                            $(".Maze-compq").addClass('Maze-active-compq').removeClass('Maze-inactive-compq');
                         }
                         return false;
                     } else {
