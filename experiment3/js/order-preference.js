@@ -176,6 +176,7 @@ function make_slides(f) {
                         t.showWord(t.currentWord);
                         if (t.currentWord == t.stoppingPoint-1) {
                             $(".Maze-compq").html(t.compq);
+                            $(".Maze-compq").css("border", "2px solid red;");
                         }
                         return false;
                     } else {
