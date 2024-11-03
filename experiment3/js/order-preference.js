@@ -73,8 +73,9 @@ function make_slides(f) {
                 console.log(stim);
                 this.stim = stim;
                 console.log(stim);
-                this.words = this.stim.s.split(" ")
-                this.alts = this.stim.a.split(" ")
+                this.words = this.stim.s.split(" ");
+                this.alts = this.stim.a.split(" ");
+                this.compq = this.stim.q;
                 this.order = [];
                 this.mazeResults = [];
                 this.correct = [];
@@ -160,7 +161,8 @@ function make_slides(f) {
                         t.previousTime = time;
                         ++(t.currentWord);
                         if (t.currentWord >= t.stoppingPoint) {
-                            $(".Maze-counter").html("Correct! Press any key to continue.");
+                            $(".Maze-counter").html(this.compq);
+                            //$(".Maze-counter").html("Correct! Press any key to continue.");
                             $(".Maze-lword").hide();
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
