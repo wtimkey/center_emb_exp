@@ -266,7 +266,8 @@ function make_slides(f) {
                     "byWords": byWords,
                     "noun": this.stim.noun,
                     "distractor_condition": this.stim.distractor_condition,
-                    "slide_number": exp.phase
+                    "slide_number": exp.phase,
+                    "comp_q": this.stim.q
                 };
                 exp.data_trials.push(dataForThisTrial);
                 console.log(exp.data_trials[exp.data_trials.length - 1]);
@@ -390,3 +391,4 @@ function init() {
 
     exp.go(); //show first slide
 }
+v
