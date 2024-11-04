@@ -75,7 +75,7 @@ function make_slides(f) {
                 console.log(stim);
                 this.words = this.stim.s.split(" ");
                 this.alts = this.stim.a.split(" ");
-                this.compq = this.stim.q;
+                this.compq = this.stim.q; 
                 this.order = [];
                 this.mazeResults = [];
                 this.correct = [];
@@ -84,6 +84,9 @@ function make_slides(f) {
                     this.mazeResults.push([null, null]);
                     this.correct.push(null);
                 }
+                this.comp_q_order = _.shuffle([0,1,2])
+                this.comp_q_answers = [this.stim.q_ac, this.stim.q_aiS1, this.stim.q_aiS3]
+                this.comp_q_answers = [this.comp_q_answers[this.comp_q_order], this.comp_q_answers[this.comp_q_order], this.comp_q_answers[this.comp_q_order] ]
                 words = ["hallo"]
                 this.redo = true; // redo when people make an error
                 var t = this;
@@ -127,10 +130,15 @@ function make_slides(f) {
                         return;
                     } else if ((code == 69 || code == 73) && (!((code == 69 && t.order[t.currentWord] == 0) || (code == 73 && t.order[t.currentWord] == 1))) && t.currentWord == 0) {
                         console.log("Do nothing");
-                    } else if (code == 69 || code == 73) {
+                    } else if (code == 69 || code == 73 || (word == t.stoppingPoint-1 && code == 66)) {
                         var word = t.currentWord;
                         if (word <= t.stoppingPoint) {
+                            if (word <= t.stoppingPoint-1) {
                             correct = ((code == 69 && t.order[word] == 0) || (code == 73 && t.order[word] == 1)) ? "yes" : "no";
+                            }
+                            else{
+                                correct = ((code == 69 && t.comp_q_order[0] == 0) || (code == 73 && t.comp_q_order[1] == 0) || (code == 66 && t.comp_q_order[2] == 0)) ? "yes" : "no"; 
+                            }
                             if (t.correct[word] == null) {
                                 t.mazeResults[word][0] = time;
                                 t.mazeResults[word][1] = t.previousTime;
@@ -159,8 +167,10 @@ function make_slides(f) {
                                 }
                                 $(".Maze-lword").hide();
                                 $(".Maze-rword").hide();
+                                $(".Maze-bword").hide();
                                 $(".Maze-larrow").hide();
                                 $(".Maze-rarrow").hide();
+                                $(".Maze-barrow").hide();
                                 $(".Maze-compq").html("&nbsp;");
                                 $(".Maze-compq").addClass('Maze-inactive-compq').removeClass('Maze-active-compq');
                                 t.currentWord = -1;
@@ -175,8 +185,10 @@ function make_slides(f) {
                             $(".Maze-counter").html("Press any key to continue.");
                             $(".Maze-lword").hide();
                             $(".Maze-rword").hide();
+                            $(".Maze-bword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
+                            $(".Maze-barrow").hide();
                             $(".Maze-compq").html("&nbsp;");
                             $(".Maze-compq").addClass('Maze-inactive-compq').removeClass('Maze-active-compq');
                             t.currentWord = -2;
@@ -195,8 +207,10 @@ function make_slides(f) {
                             t.redo = false;
                             setTimeout(() => { $(".Maze-lword").show();
                                                 $(".Maze-rword").show();
+                                                $(".Maze-bword").show();
                                                 $(".Maze-larrow").show();
                                                 $(".Maze-rarrow").show();
+                                                $(".Maze-barrow").show();
                                                 t.delay_response = false;}, 1000);
                         }
                         return false;
@@ -214,13 +228,20 @@ function make_slides(f) {
             },
 
             showWord: function(w) {
-                if (this.currentWord < this.stoppingPoint) {
+                if (this.currentWord < this.stoppingPoint - 1) {
                     $(".Maze-lword").html((this.order[this.currentWord] === 0) ?
                         this.words[this.currentWord] : this.alts[this.currentWord]);
                     $(".Maze-rword").html((this.order[this.currentWord] === 0) ?
                         this.alts[this.currentWord] : this.words[this.currentWord]);
                     exp.wordsSoFar++;
                     $(".Maze-counter").html("Words so far: " + exp.wordsSoFar);
+                    this.previousTime = new Date().getTime();
+                }
+                else if (this.currentWord == this.stoppingPoint - 1) {
+
+                    $(".Maze-lword").html(this.comp_q_answers[0]);
+                    $(".Maze-rword").html(this.comp_q_answers[1]);
+                    $(".Maze-rword").html(this.comp_q_answers[2]);
                     this.previousTime = new Date().getTime();
                 }
             },
@@ -391,4 +412,3 @@ function init() {
 
     exp.go(); //show first slide
 }
-v
