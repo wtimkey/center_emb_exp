@@ -687,9 +687,9 @@ if (!Array.prototype.includes) {
 	  condemb_noun_order = Math.random();
 	  	if(condemb_noun_order > 0.5) {
 			s[5] = item.q_aiS3
-			s[8] = item.q_aC
+			s[8] = item.q_ac
 			item.q_aiS3 = s[8]
-			item.q_aiS3 = s[5]
+			item.q_ac = s[5]
 		}
 
 	  console.log(r);
