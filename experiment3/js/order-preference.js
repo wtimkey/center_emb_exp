@@ -181,7 +181,7 @@ function make_slides(f) {
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
-                            sleep(500);
+                            setTimeout(() => { console.log('delay_answer'); }, 500);
                             $(".Maze-lword").show();
                             $(".Maze-rword").show();
                             $(".Maze-larrow").show();
