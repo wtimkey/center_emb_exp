@@ -90,6 +90,7 @@ function make_slides(f) {
                 var repeat = true;
                 this.currentWord = 0;
                 this.stoppingPoint = this.words.length
+                this.delay_response = false;
                 console.log(stim.r);
                 if (stim.r != null) {
                     this.regions = stim.r.split(" ");
@@ -102,7 +103,10 @@ function make_slides(f) {
                     console.log(t.currentWord);
                     var time = new Date().getTime();
                     var code = event.keyCode;
-                    if (t.currentWord == -1) {
+                    if(t.delay_response){
+                        console.log("Do nothing");
+                    }
+                    else if (t.currentWord == -1) {
                         console.log("Current word -1 ");
                         t.currentWord = 0;
                         t.showWord(t.currentWord);
@@ -181,10 +185,12 @@ function make_slides(f) {
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
+                            t.delay_response = true;
                             setTimeout(() => { $(".Maze-lword").show();
                                                 $(".Maze-rword").show();
                                                 $(".Maze-larrow").show();
-                                                $(".Maze-rarrow").show(); }, 500);
+                                                $(".Maze-rarrow").show();
+                                                t.delay_response = false;}, 500);
                         }
                         return false;
                     } else {
