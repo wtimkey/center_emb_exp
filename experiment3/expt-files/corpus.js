@@ -638,10 +638,10 @@ if (!Array.prototype.includes) {
   for(i = 0; i<continuations.length; i++) {
 	  continuations[i][0].noun = topNouns[i];
 	  continuations[i][1].noun = topNouns[i];
-	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s;
-	  continuations[i][1].s = "The "+topNouns[i]+" was "+continuations[i][1].s;
-	  continuations[i][0].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][0].r;
-	  continuations[i][1].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][1].r;
+	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s + " .";
+	  continuations[i][1].s = "The "+topNouns[i]+" was "+continuations[i][1].s + " .";
+	  continuations[i][0].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][0].r+" REGION_CQ";
+	  continuations[i][1].r = "REGION_D0 REGION_N0 REGION_W0 "+continuations[i][1].r+" REGION_CQ";
 	  console.log(continuations[i]);
 	  if(conditionAssignment[i] < 0) {
 		  item = continuations[i][0];
@@ -679,6 +679,7 @@ if (!Array.prototype.includes) {
 	  r_ = [];
 	  s = item.s.split(" ");
 	  a = item.a.split(" ");
+	  a.push(".")
 	  r = item.r.split(" ");
 	  itemNounFoils = nounsFoils[topNouns[i]].split(" ");
 	  a[1] = itemNounFoils[0]
