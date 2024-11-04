@@ -175,6 +175,7 @@ function make_slides(f) {
                             $(".Maze-compq").html("&nbsp;");
                             $(".Maze-compq").addClass('Maze-inactive-compq').removeClass('Maze-active-compq');
                             t.currentWord = -2;
+                            t.redo = true;
                             return true;
                         }
                         t.showWord(t.currentWord);
@@ -186,11 +187,12 @@ function make_slides(f) {
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
                             t.delay_response = true;
+                            t.redo = false;
                             setTimeout(() => { $(".Maze-lword").show();
                                                 $(".Maze-rword").show();
                                                 $(".Maze-larrow").show();
                                                 $(".Maze-rarrow").show();
-                                                t.delay_response = false;}, 500);
+                                                t.delay_response = false;}, 1000);
                         }
                         return false;
                     } else {
