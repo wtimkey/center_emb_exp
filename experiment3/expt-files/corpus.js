@@ -691,6 +691,7 @@ if (!Array.prototype.includes) {
 			item.q_aiS3 = s[8]
 			item.q_ac = s[5]
 		}
+	item.q_aiS1 = topNouns[i]
 
 	  console.log(r);
 	  condition = item["condition"]
