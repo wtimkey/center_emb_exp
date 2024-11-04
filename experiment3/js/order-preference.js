@@ -86,7 +86,7 @@ function make_slides(f) {
                 }
                 this.comp_q_order = _.shuffle([0,1,2])
                 this.comp_q_answers = [this.stim.q_ac, this.stim.q_aiS1, this.stim.q_aiS3]
-                this.comp_q_answers = [this.comp_q_answers[this.comp_q_order], this.comp_q_answers[this.comp_q_order], this.comp_q_answers[this.comp_q_order] ]
+                this.comp_q_answers = [this.comp_q_answers[this.comp_q_order[0]], this.comp_q_answers[this.comp_q_order[1]], this.comp_q_answers[this.comp_q_order[2]] ]
                 words = ["hallo"]
                 this.redo = true; // redo when people make an error
                 var t = this;
