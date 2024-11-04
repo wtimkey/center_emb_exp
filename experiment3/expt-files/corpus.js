@@ -678,7 +678,8 @@ if (!Array.prototype.includes) {
 	  a_ = [];
 	  r_ = [];
 	  s = item.s.split(" ");
-	  a = item.a.split(" ") + s[5]
+	  a = item.a.split(" ");
+	  a.push(s[5])
 	  r = item.r.split(" ");
 	  itemNounFoils = nounsFoils[topNouns[i]].split(" ");
 	  a[1] = itemNounFoils[0]
