@@ -151,7 +151,12 @@ function make_slides(f) {
 //                                t.currentWord = -1;
                                 return true;
                             } else if (correct == "no") {
-                                $(".Maze-counter").html("Press any key to continue.");
+                                if(t.stim.practice) {
+                                    $(".Maze-error").html("Incorrect! Press any key to continue.");
+                                }
+                                else{
+                                    $(".Maze-counter").html("Press any key to continue.");
+                                }
                                 $(".Maze-lword").hide();
                                 $(".Maze-rword").hide();
                                 $(".Maze-larrow").hide();
