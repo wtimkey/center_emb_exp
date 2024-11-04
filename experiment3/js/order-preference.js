@@ -151,7 +151,7 @@ function make_slides(f) {
 //                                t.currentWord = -1;
                                 return true;
                             } else if (correct == "no") {
-                                $(".Maze-error").html("Incorrect! Press any key to continue");
+                                $(".Maze-counter").html("Press any key to continue.");
                                 $(".Maze-lword").hide();
                                 $(".Maze-rword").hide();
                                 $(".Maze-larrow").hide();
@@ -167,7 +167,7 @@ function make_slides(f) {
                         t.previousTime = time;
                         ++(t.currentWord);
                         if (t.currentWord >= t.stoppingPoint) {
-                            $(".Maze-counter").html("Correct! Press any key to continue.");
+                            $(".Maze-counter").html("Press any key to continue.");
                             $(".Maze-lword").hide();
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
