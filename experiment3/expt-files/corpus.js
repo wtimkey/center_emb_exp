@@ -782,7 +782,7 @@ if (!Array.prototype.includes) {
   fillers.push({s:"Dinosaurs ate other reptiles during the stone age. dinosaurs", a:"x-x-x earl write exporter minute guys wants dad. stone-age", q : "Reptiles were eaten by the ______?"}) 
   fillers.push({s:"The manager who the baker loathed spoke to the new pastry chef because he had instituted a new dress code for all employees. manager", a:"x-x-x contemplates anti map walks tenuous voted ass goal anti devoid skip weekend star mind veterinary lose dad sides want rose knew indicates. baker", q : "The ______ spoke to the new pastry chef?"}) 
   fillers.push({s:"The teacher doubted that the test that had taken him a long time to design would be easy to answer. test", a:"x-x-x totalling grinder star feet them your miss miles song anti oh her ha posted enjoy door fund foot county. teacher", q : "The ______ would be easy to answer?"}) 
-  fillers.push({s:"The cook who the servant in the kitchen hired offended the butler and then left the mansion early to see a movie at the local theater. cook", a:"x-x-x admirably trip cell justify cool lose wanting rough collapse runs thirds gold term miss rate evolved ideas bill code mean miles yeah hear their acquire. servant", q : "The butler was offtended by the ______?"}) 
+  fillers.push({s:"The cook who the servant in the kitchen hired offended the butler and then left the mansion early to see a movie at the local theater. cook", a:"x-x-x admirably trip cell justify cool lose wanting rough collapse runs thirds gold term miss rate evolved ideas bill code mean miles yeah hear their acquire. servant", q : "The butler was offended by the ______?"}) 
   
   for(i=0; i<fillers.length; i++) {
 	  fillers[i].condition = "filler"
