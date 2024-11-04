@@ -177,6 +177,15 @@ function make_slides(f) {
                         if (t.currentWord == t.stoppingPoint-1) {
                             $(".Maze-compq").html(t.compq);
                             $(".Maze-compq").addClass('Maze-active-compq').removeClass('Maze-inactive-compq');
+                            $(".Maze-lword").hide();
+                            $(".Maze-rword").hide();
+                            $(".Maze-larrow").hide();
+                            $(".Maze-rarrow").hide();
+                            sleep(500);
+                            $(".Maze-lword").show();
+                            $(".Maze-rword").show();
+                            $(".Maze-larrow").show();
+                            $(".Maze-rarrow").show();
                         }
                         return false;
                     } else {
