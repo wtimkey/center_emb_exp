@@ -181,11 +181,10 @@ function make_slides(f) {
                             $(".Maze-rword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
-                            setTimeout(() => { console.log('delay_answer'); }, 500);
-                            $(".Maze-lword").show();
-                            $(".Maze-rword").show();
-                            $(".Maze-larrow").show();
-                            $(".Maze-rarrow").show();
+                            setTimeout(() => { $(".Maze-lword").show();
+                                                $(".Maze-rword").show();
+                                                $(".Maze-larrow").show();
+                                                $(".Maze-rarrow").show(); }, 500);
                         }
                         return false;
                     } else {
