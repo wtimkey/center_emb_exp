@@ -388,7 +388,7 @@ if (!Array.prototype.includes) {
   
   continuations238 = []
   
-  for(i=0; i<36; i++) {
+  for(i=0; i<37; i++) {
 	  continuations238.push([]);
   }
   
@@ -521,7 +521,7 @@ if (!Array.prototype.includes) {
   // TODO 238 Note the order the compatible and incompatible is wrong. For consistency, this is fixed downstream in the processing script. Later, better fix this here.
   
   
-  for(i=0; i<36; i++) {
+  for(i=0; i<37; i++) {
 	  for(j=0; j<2; j++) {
 		  s = continuations238[i][j].s.split(" ");
 		  regions = [];
