@@ -138,6 +138,16 @@ function make_slides(f) {
                             }
                             else{
                                 correct = ((code == 69 && t.comp_q_order[0] == 0) || (code == 73 && t.comp_q_order[1] == 0) || (code == 66 && t.comp_q_order[2] == 0)) ? "yes" : "no"; 
+                                t.comp_q_response = ""
+                                if(code == 69){
+                                    t.comp_q_response = t.comp_q_answers[0]
+                                }
+                                else if (code == 73){
+                                    t.comp_q_response = t.comp_q_answers[1]
+                                }
+                                else if (code == 66){
+                                    t.comp_q_response = t.comp_q_answers[2]
+                                }
                             }
                             if (t.correct[word] == null) {
                                 t.mazeResults[word][0] = time;
@@ -289,7 +299,10 @@ function make_slides(f) {
                     "distractor_condition": this.stim.distractor_condition,
                     "slide_number": exp.phase,
                     "comp_q": this.stim.q,
-                    "comp_q_order": this.comp_q_order
+                    "comp_q_order": this.comp_q_order,
+                    "comp_q_order_words": this.comp_q_answers,
+                    "comp_q_response": this.comp_q_response,
+                    "comp_q_correct": byWords[-1]["correct"]
                 };
                 exp.data_trials.push(dataForThisTrial);
                 console.log(exp.data_trials[exp.data_trials.length - 1]);
