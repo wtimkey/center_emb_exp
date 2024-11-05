@@ -302,7 +302,7 @@ function make_slides(f) {
                     "comp_q_order": this.comp_q_order,
                     "comp_q_order_words": this.comp_q_answers,
                     "comp_q_response": this.comp_q_response,
-                    "comp_q_correct": byWords[-1]["correct"]
+                    "comp_q_correct": byWords[byWords.length-1]["correct"]
                 };
                 exp.data_trials.push(dataForThisTrial);
                 console.log(exp.data_trials[exp.data_trials.length - 1]);
