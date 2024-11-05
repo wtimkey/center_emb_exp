@@ -241,7 +241,7 @@ function make_slides(f) {
 
                     $(".Maze-lword").html(this.comp_q_answers[0]);
                     $(".Maze-rword").html(this.comp_q_answers[1]);
-                    $(".Maze-rword").html(this.comp_q_answers[2]);
+                    $(".Maze-bword").html(this.comp_q_answers[2]);
                     this.previousTime = new Date().getTime();
                 }
             },
@@ -288,7 +288,8 @@ function make_slides(f) {
                     "noun": this.stim.noun,
                     "distractor_condition": this.stim.distractor_condition,
                     "slide_number": exp.phase,
-                    "comp_q": this.stim.q
+                    "comp_q": this.stim.q,
+                    "comp_q_order": this.comp_q_order
                 };
                 exp.data_trials.push(dataForThisTrial);
                 console.log(exp.data_trials[exp.data_trials.length - 1]);
