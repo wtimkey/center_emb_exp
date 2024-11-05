@@ -130,7 +130,7 @@ function make_slides(f) {
                         return;
                     } else if ((code == 69 || code == 73) && (!((code == 69 && t.order[t.currentWord] == 0) || (code == 73 && t.order[t.currentWord] == 1))) && t.currentWord == 0) {
                         console.log("Do nothing");
-                    } else if (code == 69 || code == 73 || (word == t.stoppingPoint-1 && code == 66)) {
+                    } else if (code == 69 || code == 73 || (t.currentWord == t.stoppingPoint-1 && code == 66)) {
                         var word = t.currentWord;
                         if (word <= t.stoppingPoint) {
                             if (word <= t.stoppingPoint-1) {
