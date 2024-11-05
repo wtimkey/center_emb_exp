@@ -99,6 +99,7 @@ function make_slides(f) {
                     this.regions = stim.r.split(" ");
                 } else {
                     this.regions = this.words;
+                    this.regions[length(this.regions)-1] = "FILLER_CQ"
                 }
                 console.log(this.regions);
                 this.listener = function(event) {
