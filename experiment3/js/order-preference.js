@@ -211,8 +211,10 @@ function make_slides(f) {
                             $(".Maze-compq").addClass('Maze-active-compq').removeClass('Maze-inactive-compq');
                             $(".Maze-lword").hide();
                             $(".Maze-rword").hide();
+                            $(".Maze-bword").hide();
                             $(".Maze-larrow").hide();
                             $(".Maze-rarrow").hide();
+                            $(".Maze-barrow").hide();
                             t.delay_response = true;
                             t.redo = false;
                             setTimeout(() => { $(".Maze-lword").show();
