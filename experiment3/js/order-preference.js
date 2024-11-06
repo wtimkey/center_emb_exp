@@ -297,6 +297,7 @@ function make_slides(f) {
                     "sentence": this.stim.s,
                     "item": this.stim.item,
                     "condition": this.stim.condition,
+                    "swap_nouns": this.stim.swap_nouns,
                     "byWords": byWords,
                     "noun": this.stim.noun,
                     "distractor_condition": this.stim.distractor_condition,
