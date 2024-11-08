@@ -845,7 +845,7 @@ if (!Array.prototype.includes) {
   
   fillersAndCritical = separatedShuffle(_.sample(fillers, 36), criticalChosen);
   
-  fullStimuli = _.shuffle(practice).concat(fillersAndCritical);
+  fullStimuli = practice.concat(fillersAndCritical);
   
   item_ids = [];
   
