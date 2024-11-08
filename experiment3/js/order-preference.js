@@ -84,7 +84,7 @@ function make_slides(f) {
                     this.mazeResults.push([null, null]);
                     this.correct.push(null);
                 }
-                if(t.stim.practice){
+                if(this.stim.practice){
                     if(this.stim.item == "Practice_0"){
                         this.comp_q_order = [0,1,2]
                     }
