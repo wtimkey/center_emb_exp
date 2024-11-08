@@ -84,7 +84,26 @@ function make_slides(f) {
                     this.mazeResults.push([null, null]);
                     this.correct.push(null);
                 }
-                this.comp_q_order = _.shuffle([0,1,2])
+                if(t.stim.practice){
+                    if(this.stim.item == "Practice_0"){
+                        this.comp_q_order = [0,1,2]
+                    }
+                    else if(this.stim.item == "Practice_1"){
+                        this.comp_q_order = [1,0,2]
+                    }
+                    else if(this.stim.item == "Practice_2"){
+                        this.comp_q_order = [1,2,0]
+                    }
+                    else if(this.stim.item == "Practice_3"){
+                        this.comp_q_order = [2,1,0]
+                        $(".Maze-barrow").html("&nbsp;");
+                    }
+                }
+                else{
+                    this.comp_q_order = _.shuffle([0,1,2])
+                    $(".Maze-barrow").html("&nbsp;");
+                }
+                 //if not the practice round - if practice round, then preset this.
                 this.comp_q_answers = [this.stim.q_ac, this.stim.q_aiS1, this.stim.q_aiS3]
                 this.comp_q_answers = [this.comp_q_answers[this.comp_q_order[0]], this.comp_q_answers[this.comp_q_order[1]], this.comp_q_answers[this.comp_q_order[2]] ]
                 words = ["hallo"]
@@ -131,14 +150,14 @@ function make_slides(f) {
                         return;
                     } else if ((code == 69 || code == 73) && (!((code == 69 && t.order[t.currentWord] == 0) || (code == 73 && t.order[t.currentWord] == 1))) && t.currentWord == 0) {
                         console.log("Do nothing");
-                    } else if (code == 69 || code == 73 || (t.currentWord == t.stoppingPoint-1 && code == 66)) {
+                    } else if (code == 69 || code == 73 || (t.currentWord == t.stoppingPoint-1 && code == 32)) {
                         var word = t.currentWord;
                         if (word <= t.stoppingPoint) {
                             if (word < t.stoppingPoint-1) {
                             correct = ((code == 69 && t.order[word] == 0) || (code == 73 && t.order[word] == 1)) ? "yes" : "no";
                             }
                             else{
-                                correct = ((code == 69 && t.comp_q_order[0] == 0) || (code == 73 && t.comp_q_order[1] == 0) || (code == 66 && t.comp_q_order[2] == 0)) ? "yes" : "no"; 
+                                correct = ((code == 69 && t.comp_q_order[0] == 0) || (code == 73 && t.comp_q_order[1] == 0) || (code == 32 && t.comp_q_order[2] == 0)) ? "yes" : "no"; 
                                 t.comp_q_response = ""
                                 if(code == 69){
                                     t.comp_q_response = t.comp_q_answers[0]
@@ -146,7 +165,7 @@ function make_slides(f) {
                                 else if (code == 73){
                                     t.comp_q_response = t.comp_q_answers[1]
                                 }
-                                else if (code == 66){
+                                else if (code == 32){
                                     t.comp_q_response = t.comp_q_answers[2]
                                 }
                             }
@@ -170,12 +189,7 @@ function make_slides(f) {
 //                                t.currentWord = -1;
                                 return true;
                             } else if (correct == "no") {
-                                if(t.stim.practice) {
-                                    $(".Maze-error").html("Incorrect! Press any key to continue.");
-                                }
-                                else{
-                                    $(".Maze-counter").html("Press any key to continue.");
-                                }
+                                $(".Maze-counter").html("Press any key to continue.");
                                 $(".Maze-lword").hide();
                                 $(".Maze-rword").hide();
                                 $(".Maze-bword").hide();
@@ -217,7 +231,9 @@ function make_slides(f) {
                             $(".Maze-rarrow").hide();
                             $(".Maze-barrow").hide();
                             t.delay_response = true;
-                            t.redo = false;
+                            if(!t.stim.practice){
+                                t.redo = false;
+                            }
                             setTimeout(() => { $(".Maze-lword").show();
                                                 $(".Maze-rword").show();
                                                 $(".Maze-bword").show();
