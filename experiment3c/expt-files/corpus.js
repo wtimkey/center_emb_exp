@@ -401,8 +401,8 @@ if (!Array.prototype.includes) {
   continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted with the money /reassured the customer, /and it /proved to be true.", a : "x-x-x apart pre cent eat soften cool bus whether chronic walk yeah thank taekwondo fun produces, ago hill guitar talk lake wear.", n : "CLAIM", q : "The customer was reassured by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
   continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted with the money /decieved the customer, /and it /proved to be true.", a : "x-x-x apart pre cent eat soften cool bus whether chronic walk yeah thank taekwondo fun produces, ago hill guitar talk lake wear." , n : "CLAIM", q : "The customer was decieved by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
  
-  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with yesterday /vindicated the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park.", n : "CLAIM", q : "The defendant was vindicated by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
-  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with this morning /acquitted the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park." , n : "CLAIM", q : "The defendant was acquitted by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
+  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with earlier today /vindicated the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park.", n : "CLAIM", q : "The defendant was vindicated by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
+  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with earlier today /acquitted the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park." , n : "CLAIM", q : "The defendant was acquitted by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
  
   continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted deeply /motivated the sailor, /and it /was nice to hear.", a : "x-x-x apart mid cent miss located yeah holy pray volumes tablet migration cup undone, goal app kid hill dad anti.", n : "CLAIM FACT", q : "The sailor was motivated by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
   continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted deeply /commanded the sailor, /and it /was nice to hear.", a : "x-x-x apart mid cent miss located yeah holy pray volumes tablet migration cup undone, goal app kid hill dad anti." , n : "CLAIM FACT", q : "The sailor was commanded by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
@@ -773,7 +773,7 @@ if (!Array.prototype.includes) {
   }
 
   control_fillers = [];
-  
+
   
   
   
