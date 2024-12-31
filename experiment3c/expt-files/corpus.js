@@ -219,7 +219,7 @@ if (!Array.prototype.includes) {
   //nounsByThatBiasOrder.push("report")
   //nounsByThatBiasOrder.push("assessment")
   //nounsByThatBiasOrder.push("truth")
-  nounsByThatBiasOrder.push("declaration")
+  //nounsByThatBiasOrder.push("declaration")
   //nounsByThatBiasOrder.push("complaint")
   nounsByThatBiasOrder.push("admission")
   //nounsByThatBiasOrder.push("disclosure")
@@ -269,7 +269,6 @@ if (!Array.prototype.includes) {
   nounsByThatBiasOrder.push("belief")
   nounsByThatBiasOrder.push("fact")
   nounsByThatBiasOrder.push("possibility")
-  nounsByThatBiasOrder.push("declaration")
   
   nounsFoils = {"assertion":"adulthood fat",
 				"assessment":"guaranteed glad",
@@ -360,7 +359,7 @@ if (!Array.prototype.includes) {
   console.log("TOP NOUNS BEFORE SLICING", topNouns);
   
   //topNouns = _.sample(topNouns, topNouns.length);
-  _.shuffle(topNouns)
+  topNouns = _.shuffle(topNouns);
   
   
   console.log("LENGTH", topNouns.length, topNouns);
@@ -531,6 +530,7 @@ if (!Array.prototype.includes) {
   
   
   continuationsChosen = _.shuffle(continuations);
+  continuationsChosen = continuationsChosen.slice(0, topNouns.length);
   console.log(continuationsChosen);
   
   
