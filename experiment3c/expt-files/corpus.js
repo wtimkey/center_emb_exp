@@ -148,71 +148,62 @@ if (!Array.prototype.includes) {
   nouns["CLAIM"] = []
   nouns["ACCUSATION"] = []
   nouns["FACT"] = []
-  
+  // update for version 3c; remove all nouns in the upper half for RC bias.
   // CLAIM: a claim whose truth or falsity is not presupposed.
   nouns["CLAIM"].push("assertion")
-  nouns["CLAIM"].push("assessment")
+  //nouns["CLAIM"].push("assessment")
   nouns["CLAIM"].push("assumption")
   nouns["CLAIM"].push("belief")
   nouns["CLAIM"].push("claim")
   nouns["CLAIM"].push("conclusion")
-  nouns["CLAIM"].push("feeling")
+  //nouns["CLAIM"].push("feeling")
   nouns["CLAIM"].push("finding")
-  nouns["CLAIM"].push("idea")
-  nouns["CLAIM"].push("inkling")
-  nouns["CLAIM"].push("news")
+  //nouns["CLAIM"].push("inkling")
+  //nouns["CLAIM"].push("news")
   nouns["CLAIM"].push("opinion")
-  nouns["CLAIM"].push("perception")
+  //nouns["CLAIM"].push("perception")
   nouns["CLAIM"].push("presumption")
-  nouns["CLAIM"].push("remark")
+  //nouns["CLAIM"].push("remark")
   nouns["CLAIM"].push("reminder")
   nouns["CLAIM"].push("revelation")
   nouns["CLAIM"].push("rumor")
   nouns["CLAIM"].push("speculation")
-  nouns["CLAIM"].push("statement")
+  //nouns["CLAIM"].push("statement")
   nouns["CLAIM"].push("suggestion")
-  nouns["CLAIM"].push("theory")
-  nouns["CLAIM"].push("view")
+  //nouns["CLAIM"].push("theory")
+  //nouns["CLAIM"].push("view")
   nouns["CLAIM"].push("assurance")
-  nouns["CLAIM"].push("message")
+  //nouns["CLAIM"].push("message")
   nouns["CLAIM"].push("contention")
-  nouns["CLAIM"].push("impression")
-  nouns["CLAIM"].push("opinion")
-  nouns["CLAIM"].push("sense")
-  nouns["CLAIM"].push("presumption")
-  nouns["CLAIM"].push("revelation")
-  nouns["CLAIM"].push("intuition")
+  //nouns["CLAIM"].push("impression")
+  //nouns["CLAIM"].push("sense")
+  //nouns["CLAIM"].push("intuition")
   nouns["CLAIM"].push("conjecture")
   nouns["CLAIM"].push("conviction")
   nouns["CLAIM"].push("thought")
-  nouns["CLAIM"].push("claim")
-  nouns["CLAIM"].push("conclusion")
-  nouns["CLAIM"].push("feeling")
-  nouns["CLAIM"].push("finding")
-  nouns["CLAIM"].push("idea")
+  //nouns["CLAIM"].push("feeling")
+  //nouns["CLAIM"].push("idea")
   nouns["CLAIM"].push("indication")
-  nouns["CLAIM"].push("presumption")
-  nouns["CLAIM"].push("revelation")
-  nouns["CLAIM"].push("rumor")
-  nouns["CLAIM"].push("speculation")
-  nouns["CLAIM"].push("guess")
-  nouns["CLAIM"].push("story")
-  nouns["CLAIM"].push("report")
+  nouns["CLAIM"].push("implication")
+  //nouns["CLAIM"].push("guess")
+  //nouns["CLAIM"].push("story")
+  //nouns["CLAIM"].push("report")
 
-  nouns["ACCUSATION"].push("allegation")
-  nouns["ACCUSATION"].push("accusation")
+  //nouns["ACCUSATION"].push("allegation")
+  //nouns["ACCUSATION"].push("accusation")
   nouns["ACCUSATION"].push("insinuation") 
-  nouns["ACCUSATION"].push("complaint")
+  //nouns["ACCUSATION"].push("complaint")
   nouns["ACCUSATION"].push("suspicion")
 
-  nouns["FACT"].push("truth")
+  //nouns["FACT"].push("truth")
   nouns["FACT"].push("fact")
   nouns["FACT"].push("reminder")
-  nouns["FACT"].push("proof")
+  //nouns["FACT"].push("proof")
   nouns["FACT"].push("realization")
-  nouns["FACT"].push("observation")
-  nouns["FACT"].push("understanding")
-  nouns["FACT"].push("disclosure")
+  nouns["FACT"].push("possibility")
+  //nouns["FACT"].push("observation")
+  //nouns["FACT"].push("understanding")
+  //nouns["FACT"].push("disclosure")
   
   nounsByThatBiasOrder = [];
   
@@ -224,57 +215,61 @@ if (!Array.prototype.includes) {
   
   
   // Nouns selected according to the average of the three log-frequencies
-  nounsByThatBiasOrder.push("story")
-  nounsByThatBiasOrder.push("report")
-  nounsByThatBiasOrder.push("assessment")
-  nounsByThatBiasOrder.push("truth")
+  //nounsByThatBiasOrder.push("story")
+  //nounsByThatBiasOrder.push("report")
+  //nounsByThatBiasOrder.push("assessment")
+  //nounsByThatBiasOrder.push("truth")
   nounsByThatBiasOrder.push("declaration")
-  nounsByThatBiasOrder.push("complaint")
+  //nounsByThatBiasOrder.push("complaint")
   nounsByThatBiasOrder.push("admission")
-  nounsByThatBiasOrder.push("disclosure")
+  //nounsByThatBiasOrder.push("disclosure")
   nounsByThatBiasOrder.push("confirmation")
-  nounsByThatBiasOrder.push("remark")
-  nounsByThatBiasOrder.push("news")
-  nounsByThatBiasOrder.push("proof")
-  nounsByThatBiasOrder.push("message")
+  //nounsByThatBiasOrder.push("remark")
+  //nounsByThatBiasOrder.push("news")
+  //nounsByThatBiasOrder.push("proof")
+  //nounsByThatBiasOrder.push("message")
   nounsByThatBiasOrder.push("announcement")
-  nounsByThatBiasOrder.push("statement")
+  //nounsByThatBiasOrder.push("statement")
   nounsByThatBiasOrder.push("thought")
-  nounsByThatBiasOrder.push("allegation")
+  //nounsByThatBiasOrder.push("allegation")
   nounsByThatBiasOrder.push("indication")
+  nounsByThatBiasOrder.push("insinuation")
   nounsByThatBiasOrder.push("recognition")
   nounsByThatBiasOrder.push("speculation")
-  nounsByThatBiasOrder.push("accusation")
+  //nounsByThatBiasOrder.push("accusation")
   nounsByThatBiasOrder.push("reminder")
   nounsByThatBiasOrder.push("rumor")
   nounsByThatBiasOrder.push("finding")
-  nounsByThatBiasOrder.push("idea")
-  nounsByThatBiasOrder.push("feeling")
+  //nounsByThatBiasOrder.push("idea")
+  //nounsByThatBiasOrder.push("feeling")
   nounsByThatBiasOrder.push("conjecture")
-  nounsByThatBiasOrder.push("perception")
+  //nounsByThatBiasOrder.push("perception")
   nounsByThatBiasOrder.push("certainty")
   nounsByThatBiasOrder.push("revelation")
   nounsByThatBiasOrder.push("understanding")
   nounsByThatBiasOrder.push("claim")
-  nounsByThatBiasOrder.push("view")
-  nounsByThatBiasOrder.push("observation")
+  //nounsByThatBiasOrder.push("view")
+  //nounsByThatBiasOrder.push("observation")
   nounsByThatBiasOrder.push("conviction")
   nounsByThatBiasOrder.push("presumption")
-  nounsByThatBiasOrder.push("intuition")
+  //nounsByThatBiasOrder.push("intuition")
   nounsByThatBiasOrder.push("opinion")
   nounsByThatBiasOrder.push("conclusion")
   nounsByThatBiasOrder.push("notion")
   nounsByThatBiasOrder.push("suggestion")
-  nounsByThatBiasOrder.push("sense")
+  //nounsByThatBiasOrder.push("sense")
   nounsByThatBiasOrder.push("suspicion")
   nounsByThatBiasOrder.push("assurance")
   nounsByThatBiasOrder.push("realization")
+  nounsByThatBiasOrder.push("implication")
   nounsByThatBiasOrder.push("assertion")
-  nounsByThatBiasOrder.push("impression")
+  //nounsByThatBiasOrder.push("impression")
   nounsByThatBiasOrder.push("contention")
   nounsByThatBiasOrder.push("assumption")
   nounsByThatBiasOrder.push("belief")
   nounsByThatBiasOrder.push("fact")
+  nounsByThatBiasOrder.push("possibility")
+  nounsByThatBiasOrder.push("declaration")
   
   nounsFoils = {"assertion":"adulthood fat",
 				"assessment":"guaranteed glad",
@@ -282,6 +277,7 @@ if (!Array.prototype.includes) {
 				"belief":"invest miss",
 				"claim":"apart pre",
 				"conclusion":"facilitate cent",
+				"declaration":"facilitate cent",
 				"feeling":"anymore pre",
 				"finding":"watched pre",
 				"idea":"gone wish",
@@ -303,6 +299,8 @@ if (!Array.prototype.includes) {
 				"message":"anymore pre",
 				"contention":"benefiting pre",
 				"impression":"facilitate sell",
+				"implication":"facilitate sell",
+				"possibility":"facilitate sell",
 				"opinion":"anymore mid",
 				"sense":"apart cent",
 				"presumption":"warehousing join",
@@ -361,25 +359,8 @@ if (!Array.prototype.includes) {
   console.log("------------------------")
   console.log("TOP NOUNS BEFORE SLICING", topNouns);
   
-  topNouns1 = _.sample(topNouns.slice(0, 15), 12);
-  topNouns2 = _.sample(topNouns.slice(topNouns.length-15, topNouns.length), 12);
-  //topNouns2 = topNouns.slice(10, 20);
-  
-  
-  console.log(topNouns1);
-  console.log(topNouns2);
-  console.log("SELECTION");
-  topNouns = [];
-  for(i=0; i<6; i++) {
-	  selected1 = (Math.random() > 0.5) ? 2*i : 2*i+1;
-	  selected2 = (Math.random() > 0.5) ? 2*i : 2*i+1;
-	  console.log(selected1, selected2, topNouns1.length, topNouns2.length);
-	  topNouns.push(topNouns1[selected1]);
-	  topNouns.push(topNouns2[selected2]);
-  }
-  
-  
-  // for now, only use topNouns1
+  //topNouns = _.sample(topNouns, topNouns.length);
+  _.shuffle(topNouns)
   
   
   console.log("LENGTH", topNouns.length, topNouns);
@@ -388,124 +369,121 @@ if (!Array.prototype.includes) {
   
   continuations238 = []
   
-  for(i=0; i<37; i++) {
+  for(i=0; i<36; i++) {
 	  continuations238.push([]);
   }
   
   
-  continuations238[0].push({item : "238_Critical_VN1", s : "that the teacher who the principal liked /annoyed the student, /but it /was only a malicious smear.",a : "x-x-x apart pre cent hour located mid jack ourselves thick phoenix wall follows, hill sun global ride app generates moons."   , n : "CLAIM ACCUSATION", q : "The student was annoyed by the ______?", q_ac : "teacher", q_aiS1 : "", q_aiS3 : "principal"})
-  continuations238[0].push({item : "238_Critical_VN1", s : "that the teacher who the principal liked /diciplined the student, /but it /was only a malicious smear.",a : "x-x-x apart pre cent hour located mid jack ourselves thick phoenix wall follows, hill sun global ride app generates moons."    , n : "CLAIM ACCUSATION", q : "The student was diciplined by the ______?", q_ac : "teacher", q_aiS1 : "", q_aiS3 : "principal"})
+  continuations238[0].push({item : "238_Critical_VN1", s : "that the teacher who the principal saw yesterday /annoyed the student, /and it /was confirmed today.",a : "x-x-x apart kid cent miss located pre jack depending okay estimated surreal anti require, guy hill fat ourselves block."   , n : "CLAIM ACCUSATION", q : "The student was annoyed by the ______?", q_ac : "teacher", q_aiS1 : "", q_aiS3 : "principal"})
+  continuations238[0].push({item : "238_Critical_VN1", s : "that the teacher who the principal saw yesterday /diciplined the student, /and it /was confirmed today.",a : "x-x-x apart kid cent miss located pre jack depending okay estimated surreal anti require, guy hill fat ourselves block."    , n : "CLAIM ACCUSATION", q : "The student was diciplined by the ______?", q_ac : "teacher", q_aiS1 : "", q_aiS3 : "principal"})
   
-  continuations238[1].push({item : "238_Critical_VN2", s : "that the doctor who the nurse mistrusted /bothered the patients, /but it /seemed hard to believe.",a : "x-x-x else cash cent jack whilst pre holy reinforce arrowheads retailer mid enjoying, goal vs videos hill ring dollars."  , n : "CLAIM FACT", q : "The patients were bothered by the ______?", q_ac : "doctor", q_aiS1 : "", q_aiS3 : "nurse"})
-  continuations238[1].push({item : "238_Critical_VN2", s : "that the doctor who the nurse mistrusted /treated the patients, /but it /seemed hard to believe.",a : "x-x-x else cash cent jack whilst pre holy reinforce arrowheads retailer mid enjoying, goal vs videos hill ring dollars."  , n : "CLAIM FACT", q : "The patients were treated by the ______?", q_ac : "doctor", q_aiS1 : "", q_aiS3 : "nurse"})
+  continuations238[1].push({item : "238_Critical_VN2", s : "that the doctor who the nurse helped this morning /bothered the patients, /but it /was hard to believe.",a : "x-x-x yours pre cent know toward hill yeah pulls prices jack seconds freedoms vote consists, app lord road park card leading."  , n : "CLAIM FACT", q : "The patients were bothered by the ______?", q_ac : "doctor", q_aiS1 : "", q_aiS3 : "nurse"})
+  continuations238[1].push({item : "238_Critical_VN2", s : "that the doctor who the nurse helped this morning /treated the patients, /but it /was hard to believe.",a : "x-x-x yours pre cent know toward hill yeah pulls prices jack seconds freedoms vote consists, app lord road park card leading."  , n : "CLAIM FACT", q : "The patients were treated by the ______?", q_ac : "doctor", q_aiS1 : "", q_aiS3 : "nurse"})
   
-  continuations238[2].push({item : "238_Critical_VN3", s : "that the president who the secretary admired /impressed the commander, /but it /was entirely bogus.",a : "x-x-x apart glad cent eat ourselves yeah okay meters collide awareness pre disorders, ways wall ice sciences maths.", n : "CLAIM", q : "The commander was impressed by the ______?", q_ac : "president", q_aiS1 : "", q_aiS3 : "secretary"})
-  continuations238[2].push({item : "238_Critical_VN3", s : "that the president who the secretary admired /appointed the commander, /but it /was entirely bogus.",a : "x-x-x apart glad cent eat ourselves yeah okay meters collide awareness pre disorders, ways wall ice sciences maths."  , n : "CLAIM", q : "The commander was appointed by the ______?", q_ac : "president", q_aiS1 : "", q_aiS3 : "secretary"})
+  continuations238[2].push({item : "238_Critical_VN3", s : "that the president who the secretary called yesterday /impressed the commander, /but it /was controversial.",a : "x-x-x yours glad hour know ourselves fun guy alongside recent apartment disappear jack accidents, mom app race practitioners.", n : "CLAIM", q : "The commander was impressed by the ______?", q_ac : "president", q_aiS1 : "", q_aiS3 : "secretary"})
+  continuations238[2].push({item : "238_Critical_VN3", s : "that the president who the secretary called yesterday /appointed the commander, /but it /was controversial.",a : "x-x-x yours glad hour know ourselves fun guy alongside recent apartment disappear jack accidents, mom app race practitioners."  , n : "CLAIM", q : "The commander was appointed by the ______?", q_ac : "president", q_aiS1 : "", q_aiS3 : "secretary"})
   
-  continuations238[3].push({item : "238_Critical_VN4", s : "that the victim who the driver rescued /shocked the criminal, /and it /appeared on TV.",a : "x-x-x else anti cent eat toward mid lake teaming adviser overview jack involves, miss dad download hall grow.", n : "CLAIM FACT", q : "The criminal was shocked by the ______?", q_ac : "victim", q_aiS1 : "", q_aiS3 : "driver"})
-  continuations238[3].push({item : "238_Critical_VN4", s : "that the victim who the driver rescued /sued the criminal, /and it /appeared on TV.",a : "x-x-x else anti cent eat toward mid lake teaming adviser overview jack involves, miss dad download hall grow." , n : "CLAIM FACT", q : "The criminal was sued by the ______?", q_ac : "victim", q_aiS1 : "", q_aiS3 : "driver"})
+  continuations238[3].push({item : "238_Critical_VN4", s : "that the victim who the driver rescued last night /shocked the criminal, /and it /appeared on TV.",a : "x-x-x apart pre cent know toward dad lake expand optimal yeah china genesis drop anywhere, ago app ministry jack GROW.", n : "CLAIM FACT", q : "The criminal was shocked by the ______?", q_ac : "victim", q_aiS1 : "", q_aiS3 : "driver"})
+  continuations238[3].push({item : "238_Critical_VN4", s : "that the victim who the driver rescued last night /sued the criminal, /and it /appeared on TV.",a : "x-x-x apart pre cent know toward dad lake expand optimal yeah china genesis drop anywhere, ago app ministry jack GROW." , n : "CLAIM FACT", q : "The criminal was sued by the ______?", q_ac : "victim", q_aiS1 : "", q_aiS3 : "driver"})
   
-  continuations238[4].push({item : "238_Critical_VN5", s : "that the guest who the cousin invited /pleased the uncle, /and it /drove Jill crazy.",a : "x-x-x apart sick hour eat grows pre hill argues letting arsenal push aimed, anti cent cents Heap prime.", n : "CLAIM FACT", q : "The uncle was pleased by the ______?", q_ac : "guest", q_aiS1 : "", q_aiS3 : "cousin"})
-  continuations238[4].push({item : "238_Critical_VN5", s : "that the guest who the cousin invited /visited the uncle, /and it /drove Jill crazy.",a : "x-x-x apart sick hour eat grows pre hill argues letting arsenal push aimed, anti cent cents Heap prime." , n : "CLAIM FACT", q : "The uncle was visited by the ______?", q_ac : "guest", q_aiS1 : "", q_aiS3 : "cousin"})
+  continuations238[4].push({item : "238_Critical_VN5", s : "that the guest who the cousin invited last year /pleased the uncle, /and it /drove Jill crazy.",a : "x-x-x apart pre cent walk shown yeah sale inches letting anti lake jewelry jack wears, guy app cents Slab scale.", n : "CLAIM FACT", q : "The uncle was pleased by the ______?", q_ac : "guest", q_aiS1 : "", q_aiS3 : "cousin"})
+  continuations238[4].push({item : "238_Critical_VN5", s : "that the guest who the cousin invited last year /visited the uncle, /and it /drove Jill crazy.",a : "x-x-x apart pre cent walk shown yeah sale inches letting anti lake jewelry jack wears, guy app cents Slab scale." , n : "CLAIM FACT", q : "The uncle was visited by the ______?", q_ac : "guest", q_aiS1 : "", q_aiS3 : "cousin"})
   
-  continuations238[5].push({item : "238_Critical_VN6", s : "that the psychiatrist who the surgeon assisted /horrified the patient, /and it /became widely known.",a : "x-x-x else cash jack hear investigates hill tree cents outcomes paperback cent suppose, sell guys global sticks build.", n : "CLAIM FACT", q : "The patient was horrified by the ______?", q_ac : "psychiatrist", q_aiS1 : "", q_aiS3 : "surgeon"})
-  continuations238[5].push({item : "238_Critical_VN6", s : "that the psychiatrist who the surgeon assisted /diagnosed the patient, /and it /became widely known.",a : "x-x-x else cash jack hear investigates hill tree cents outcomes paperback cent suppose, sell guys global sticks build." , n : "CLAIM FACT", q : "The patient was diagnosed by the ______?", q_ac : "psychiatrist", q_aiS1 : "", q_aiS3 : "surgeon"})
+  continuations238[5].push({item : "238_Critical_VN6", s : "that the psychiatrist who the surgeon assisted for hours /horrified the patient, /and it /became widely known.",a : "x-x-x apart sick cent miss supplemented hill wind formats monetary draw weird fragrance vote reached, fun app winner remind wants.", n : "CLAIM FACT", q : "The patient was horrified by the ______?", q_ac : "psychiatrist", q_aiS1 : "", q_aiS3 : "surgeon"})
+  continuations238[5].push({item : "238_Critical_VN6", s : "that the psychiatrist who the surgeon assisted for hours /diagnosed the patient, /and it /became widely known.",a : "x-x-x apart sick cent miss supplemented hill wind formats monetary draw weird fragrance vote reached, fun app winner remind wants." , n : "CLAIM FACT", q : "The patient was diagnosed by the ______?", q_ac : "psychiatrist", q_aiS1 : "", q_aiS3 : "surgeon"})
   
-  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called /amazed the tourist, /and it /was absolutely true.",a : "x-x-x apart pre hour know abroad holy dad hence annual realms term founded, cent wall sir healthcare grow.", n : "CLAIM", q : "The tourist was amazed by the ______?", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
-  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called /phoned the tourist, /and it /was absolutely true.",a : "x-x-x apart pre hour know abroad holy dad hence annual realms term founded, cent wall sir healthcare grow." , n : "CLAIM", q : "? The tourist was phoned by the ______?", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
+  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called at breakfast /amazed the tourist, /and it /was absolutely true.",a : "x-x-x apart mid jobs eat along how yeah yours stupid same reduction sexism door jointly, ago vs pre depression cent.", n : "CLAIM", q : "The tourist was amazed by the ______?", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
+  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called at breakfast /phoned the tourist, /and it /was absolutely true.",a : "x-x-x apart mid jobs eat along how yeah yours stupid same reduction sexism door jointly, ago vs pre depression cent." , n : "CLAIM", q : "? The tourist was phoned by the ______?", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
   
-  continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved /astonished the director, /and it /appeared to be true.",a : "x-x-x apart mid hour eat shown pre hill ford miles treatise cup contains, laws app pregnant cent sir bill.", n : "CLAIM", q : "The director was astonished by the ______?", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
-  continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved /welcomed the director, /and it /appeared to be true.",a : "x-x-x apart mid hour eat shown pre hill ford miles treatise cup contains, laws app pregnant cent sir bill." , n : "CLAIM", q : "The director was welcomed by the ______?", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
+  continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved deeply /astonished the director, /and it /appeared to be true.",a : "x-x-x yours sick cent miss aware ones pre suck civil defeat compendium bag provides, anti hill daughter heat app park.", n : "CLAIM", q : "The director was astonished by the ______?", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
+  continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved deeply /welcomed the director, /and it /appeared to be true.",a : "x-x-x yours sick cent miss aware ones pre suck civil defeat compendium bag provides, anti hill daughter heat app park." , n : "CLAIM", q : "The director was welcomed by the ______?", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
   
-  continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted /reassured the customer, /but it /proved to be made up.", a : "x-x-x yours sick cent know stroll cool bus staring hydroxide phoenix jack wherever, pre holy soccer kid runs ride hear.", n : "CLAIM", q : "The customer was reassured by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
-  continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted /decieved the customer, /but it /proved to be made up.", a : "x-x-x yours sick cent know stroll cool bus staring hydroxide phoenix jack wherever, pre holy soccer kid runs ride hear." , n : "CLAIM", q : "The customer was decieved by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
+  continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted with the money /reassured the customer, /and it /proved to be true.", a : "x-x-x apart pre cent eat soften cool bus whether chronic walk yeah thank taekwondo fun produces, ago hill guitar talk lake wear.", n : "CLAIM", q : "The customer was reassured by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
+  continuations238[8].push({item : "238_Critical_VN9", s : "that the banker who the company trusted with the money /decieved the customer, /and it /proved to be true.", a : "x-x-x apart pre cent eat soften cool bus whether chronic walk yeah thank taekwondo fun produces, ago hill guitar talk lake wear." , n : "CLAIM", q : "The customer was decieved by the ______?", q_ac : "banker", q_aiS1 : "", q_aiS3 : "company"})
  
-  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury hated /vindicated the defendant, /but it /was a lie.", a : "x-x-x apart mid hour miss shown fat kid enjoying forty customize page disasters, cent hill cat eat jobs.", n : "CLAIM", q : "The defendant was vindicated by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
-  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury hated /acquitted the defendant, /but it /was a lie.", a : "x-x-x apart mid hour miss shown fat kid enjoying forty customize page disasters, cent hill cat eat jobs." , n : "CLAIM", q : "The defendant was acquitted by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
+  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with yesterday /vindicated the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park.", n : "CLAIM", q : "The defendant was vindicated by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
+  continuations238[9].push({item : "238_Critical_VN10", s : "that the judge who the jury spoke with this morning /acquitted the defendant, /and it /was true.", a : "x-x-x yours sick cent eat shown ones sale grow steam heat adventure hamburgers hour enjoyable, fun hill okay park." , n : "CLAIM", q : "The defendant was acquitted by the _______?", q_ac : "judge", q_aiS1 : "", q_aiS3 : "jury"})
  
-  continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted /motivated the sailor, /and it /was nice to hear.", a : "x-x-x else okay cent hear located mom why suck volumes continent pre enters, goal wall jack sale sun anti.", n : "CLAIM FACT", q : "The sailor was motivated by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
-  continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted /commanded the sailor, /and it /was nice to hear.", a : "x-x-x else okay cent hear located mom why suck volumes continent pre enters, goal wall jack sale sun anti." , n : "CLAIM FACT", q : "The sailor was commanded by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
+  continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted deeply /motivated the sailor, /and it /was nice to hear.", a : "x-x-x apart mid cent miss located yeah holy pray volumes tablet migration cup undone, goal app kid hill dad anti.", n : "CLAIM FACT", q : "The sailor was motivated by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
+  continuations238[10].push({item : "238_Critical_VN11", s : "that the captain who the crew trusted deeply /commanded the sailor, /and it /was nice to hear.", a : "x-x-x apart mid cent miss located yeah holy pray volumes tablet migration cup undone, goal app kid hill dad anti." , n : "CLAIM FACT", q : "The sailor was commanded by the ______?", q_ac : "captain", q_aiS1 : "", q_aiS3 : "crew"})
  
-  continuations238[11].push({item : "238_Critical_VN12", s : "that the manager who the boss authorized /saddened the intern, /but it /seemed absurd.", a : "x-x-x else anti cent eat whereas pre jack onto illustrate savannah holy oppose, hill app movies runway.", n : "CLAIM FACT", q : "The intern was saddened by the ______?", q_ac : "manager", q_aiS1 : "", q_aiS3 : "boss"})
-  continuations238[11].push({item : "238_Critical_VN12", s : "that the manager who the boss authorized /hired the intern, /but it /seemed absurd.", a : "x-x-x else anti cent eat whereas pre jack onto illustrate savannah holy oppose, hill app movies runway." , n : "CLAIM FACT", q : "The intern was hired by the ______?", q_ac : "manager", q_aiS1 : "", q_aiS3 : "boss"})
+  continuations238[11].push({item : "238_Critical_VN12", s : "that the manager who the boss authorized last year /saddened the intern, /but it /seemed absurd.", a : "x-x-x apart pre cent eat whereas mid holy onto disability yeah lake bohemian door teamed, mark app animal wander.", n : "CLAIM FACT", q : "The intern was saddened by the ______?", q_ac : "manager", q_aiS1 : "", q_aiS3 : "boss"})
+  continuations238[11].push({item : "238_Critical_VN12", s : "that the manager who the boss authorized last year /hired the intern, /but it /seemed absurd.", a : "x-x-x apart pre cent eat whereas mid holy onto disability yeah lake bohemian door teamed, mark app animal wander." , n : "CLAIM FACT", q : "The intern was hired by the ______?", q_ac : "manager", q_aiS1 : "", q_aiS3 : "boss"})
 
-  continuations238[12].push({item : "238_Critical_VN13", s : "that the bully who the parents hated /repulsed the children, /and it /was entirely correct.", a : "x-x-x breakdowns pre camp eat eaten yes lake enjoying villa vibrant jack nor, mark app note channels engines.", n : "CLAIM FACT ACCUSATION", q : "The children were repulsed by the ______?", q_ac : "bully", q_aiS1 : "", q_aiS3 : "parents"})
-  continuations238[12].push({item : "238_Critical_VN13", s : "that the bully who the parents hated /harassed the children, /and it /was entirely correct.", a : "x-x-x breakdowns pre camp eat eaten yes lake enjoying villa vibrant jack nor, mark app note channels engines." , n : "CLAIM FACT ACCUSATION", q : "The children were harassed by the ______?", q_ac : "bully", q_aiS1 : "", q_aiS3 : "parents"})
+  continuations238[12].push({item : "238_Critical_VN13", s : "that the bully who the parents met at school /repulsed the children, /and it /was entirely correct.", a : "x-x-x apart pre hour eat versa yes ones towards holy app please smoother jack appeared, miss cent anti calendar senator.", n : "CLAIM FACT ACCUSATION", q : "The children were repulsed by the ______?", q_ac : "bully", q_aiS1 : "", q_aiS3 : "parents"})
+  continuations238[12].push({item : "238_Critical_VN13", s : "that the bully who the parents met at school /harassed the children, /and it /was entirely correct.", a : "x-x-x apart pre hour eat versa yes ones towards holy app please smoother jack appeared, miss cent anti calendar senator." , n : "CLAIM FACT ACCUSATION", q : "The children were harassed by the ______?", q_ac : "bully", q_aiS1 : "", q_aiS3 : "parents"})
 
-  continuations238[13].push({item : "238_Critical_VN14", s : "that the plaintiff who the lawyer interrogated /scared the witness, /and it /made it into the news.", a : "x-x-x else mom cent miss encompass holy dad till degeneration turnaround hill thunder, ice sun walk oh guys kid yeah.", n : "CLAIM FACT", q : "The witness was scared by the ______?", q_ac : "plaintiff", q_aiS1 : "", q_aiS3 : "lawyer"})
-  continuations238[13].push({item : "238_Critical_VN14", s : "that the plaintiff who the lawyer interrogated /interrupted the witness, /and it /made it into the news.", a : "x-x-x else mom cent miss encompass holy dad till degeneration turnaround hill thunder, ice sun walk oh guys kid yeah." , n : "CLAIM FACT", q : "The witness was interrupted by the ______?", q_ac : "plaintiff", q_aiS1 : "", q_aiS3 : "lawyer"})
+  continuations238[13].push({item : "238_Critical_VN14", s : "that the plaintiff who the lawyer interrogated for hours /scared the witness, /and it /was in the news.", a : "x-x-x apart mid cent eat visualize kid pre crying subterranean foot click themes god survive, jack sun ice kids took goes.", n : "CLAIM FACT", q : "The witness was scared by the ______?", q_ac : "plaintiff", q_aiS1 : "", q_aiS3 : "lawyer"})
+  continuations238[13].push({item : "238_Critical_VN14", s : "that the plaintiff who the lawyer interrogated for hours /interrupted the witness, /and it /was in the news.", a : "x-x-x apart mid cent eat visualize kid pre crying subterranean foot click themes god survive, jack sun ice kids took goes." , n : "CLAIM FACT", q : "The witness was interrupted by the ______?", q_ac : "plaintiff", q_aiS1 : "", q_aiS3 : "lawyer"})
  
-  continuations238[14].push({item : "238_Critical_VN15", s : "that the drunkard who the thug hit /stunned the bartender, /and it /sounded hilarious.", a : "x-x-x else week jack eat furlongs yeah sale lows pre phonology glad revisited, hill app buffalo announces.", n : "CLAIM FACT", q : "The bartender was stunned by the ______?", q_ac : "drunkard", q_aiS1 : "", q_aiS3 : "thug"})
-  continuations238[14].push({item : "238_Critical_VN15", s : "that the drunkard who the thug hit /outwitted the bartender, /and it /sounded hilarious.", a : "x-x-x else week jack eat furlongs yeah sale lows pre phonology glad revisited, hill app buffalo announces." , n : "CLAIM FACT", q : "The bartender was outwitted by the ______?", q_ac : "drunkard", q_aiS1 : "", q_aiS3 : "thug"})
+  continuations238[14].push({item : "238_Critical_VN15", s : "that the drunkard who the thug hit in the face /stunned the bartender, /and it /sounded hilarious.", a : "x-x-x apart mid cent hear outgrown pre dad rife yeah glad mom else regents app delegated, fund tax consult platforms.", n : "CLAIM FACT", q : "The bartender was stunned by the ______?", q_ac : "drunkard", q_aiS1 : "", q_aiS3 : "thug"})
+  continuations238[14].push({item : "238_Critical_VN15", s : "that the drunkard who the thug hit in the face /outwitted the bartender, /and it /sounded hilarious.", a : "x-x-x apart mid cent hear outgrown pre dad rife yeah glad mom else regents app delegated, fund tax consult platforms." , n : "CLAIM FACT", q : "The bartender was outwitted by the ______?", q_ac : "drunkard", q_aiS1 : "", q_aiS3 : "thug"})
  
-  continuations238[15].push({item : "238_Critical_VN16", s : "that the medic who the survivor thanked /astonished the surgeon, /but it /turned out to be untrue.", a : "x-x-x apart pre cent know della mid lake smoothly unicorn pyramid lord thereof, jack hill nation walk park hair caster.", n : "CLAIM", q : "The surgeon was astonished by the _______?", q_ac : "medic", q_aiS1 : "", q_aiS3 : "survivor"})
-  continuations238[15].push({item : "238_Critical_VN16", s : "that the medic who the survivor thanked /greeted the surgeon, /but it /turned out to be untrue.", a : "x-x-x apart pre cent know della mid lake smoothly unicorn pyramid lord thereof, jack hill nation walk park hair caster." , n : "CLAIM", q : "The surgeon was greeted by the _______?", q_ac : "medic", q_aiS1 : "", q_aiS3 : "survivor"})
+  continuations238[15].push({item : "238_Critical_VN16", s : "that the medic who the survivor thanked today /astonished the surgeon, /but it /was true.", a : "x-x-x yours mid cent hear laude hill ones weddings nightly march rotational cup pursued, pre app ways jack.", n : "CLAIM", q : "The surgeon was astonished by the _______?", q_ac : "medic", q_aiS1 : "", q_aiS3 : "survivor"})
+  continuations238[15].push({item : "238_Critical_VN16", s : "that the medic who the survivor thanked today /greeted the surgeon, /but it /was true.", a : "x-x-x yours mid cent hear laude hill ones weddings nightly march rotational cup pursued, pre app ways jack." , n : "CLAIM", q : "The surgeon was greeted by the _______?", q_ac : "medic", q_aiS1 : "", q_aiS3 : "survivor"})
  
-  continuations238[16].push({item : "238_Critical_VN17", s : "that the bystander who the soldier taught /encouraged the swimmer, /and it /took the townspeople by surprise.", a : "x-x-x yours dad cent know diversify pre gift amongst button propose app opposes, laws tax vote ago republished vs believes.", n : "CLAIM FACT", q : "The swimmer was encouraged by the ______?", q_ac : "bystander", q_aiS1 : "", q_aiS3 : "soldier"})
-  continuations238[16].push({item : "238_Critical_VN17", s : "that the bystander who the soldier taught /rescued the swimmer, /and it /took the townspeople by surprise.", a : "x-x-x yours dad cent know diversify pre gift amongst button propose app opposes, laws tax vote ago republished vs believes." , n : "CLAIM FACT", q : "The swimmer was rescued by the ______?", q_ac : "bystander", q_aiS1 : "", q_aiS3 : "soldier"})
+  continuations238[16].push({item : "238_Critical_VN17", s : "that the bystander who the soldier taught last year /encouraged the swimmer, /and it /was surprising.", a : "x-x-x yours mid hour eat fluctuate ice pre thereby summit cent yeah properties jack cropped, term app cash incentives.", n : "CLAIM FACT", q : "The swimmer was encouraged by the ______?", q_ac : "bystander", q_aiS1 : "", q_aiS3 : "soldier"})
+  continuations238[16].push({item : "238_Critical_VN17", s : "that the bystander who the soldier taught last year /rescued the swimmer, /and it /was surprising.", a : "x-x-x yours mid hour eat fluctuate ice pre thereby summit cent yeah properties jack cropped, term app cash incentives." , n : "CLAIM FACT", q : "The swimmer was rescued by the ______?", q_ac : "bystander", q_aiS1 : "", q_aiS3 : "soldier"})
   
-  continuations238[17].push({item : "238_Critical_VN18", s : "that the fisherman who the gardener helped /delighted the politician, /and it /was on the news.", a : "x-x-x else bill jack miss entertain dad mom coincide mobile dividend app kilometers, guy pre ago announces nor whereas.", n : "CLAIM FACT", q : "The politician was delighted by the ______?", q_ac : "fisherman", q_aiS1 : "", q_aiS3 : "gardener"})
-  continuations238[17].push({item : "238_Critical_VN18", s : "that the fisherman who the gardener helped /admired the politician, /and it /was on the news.", a : "x-x-x else bill jack miss entertain dad mom coincide mobile dividend app kilometers, guy pre ago announces nor whereas." , n : "CLAIM FACT", q : "The politician was admired by the ______?", q_ac : "fisherman", q_aiS1 : "", q_aiS3 : "gardener"})
+  continuations238[17].push({item : "238_Critical_VN18", s : "that the fisherman who the gardener helped last month /delighted the politician, /and it /was on the news.", a : "x-x-x apart pre hour eat overtaken mid yeah coincide memory card smart providers app comprising, cent kid eye dad guy whom.", n : "CLAIM FACT", q : "The politician was delighted by the ______?", q_ac : "fisherman", q_aiS1 : "", q_aiS3 : "gardener"})
+  continuations238[17].push({item : "238_Critical_VN18", s : "that the fisherman who the gardener helped last month /admired the politician, /and it /was on the news.", a : "x-x-x apart pre hour eat overtaken mid yeah coincide memory card smart providers app comprising, cent kid eye dad guy whom." , n : "CLAIM FACT", q : "The politician was admired by the ______?", q_ac : "fisherman", q_aiS1 : "", q_aiS3 : "gardener"})
 
-  continuations238[18].push({item : "238_Critical_VN19", s : "that the janitor who the organizer criticized /amused the audience, /and it /was funny.", a : "x-x-x gone lose cent app onwards anti holy endorsing disclosure bundle jack includes, ago vs lord coast.", n : "CLAIM FACT", q : "The audience was amused by the ______?", q_ac : "janitor", q_aiS1 : "", q_aiS3 : "organizer"})
-  continuations238[18].push({item : "238_Critical_VN19", s : "that the janitor who the organizer criticized /ignored the audience, /and it /was funny.", a : "x-x-x gone lose cent app onwards anti holy endorsing disclosure bundle jack includes, ago vs lord coast." , n : "CLAIM FACT", q : "The audience was ignored by the ______?", q_ac : "janitor", q_aiS1 : "", q_aiS3 : "organizer"})
+  continuations238[18].push({item : "238_Critical_VN19", s : "that the janitor who the organizer criticized every week /amused the audience, /and it /was funny.", a : "x-x-x apart mid cent eat majored anti jack premieres parameters click yeah artery wall contains, ago vs jobs coast.", n : "CLAIM FACT", q : "The audience was amused by the ______?", q_ac : "janitor", q_aiS1 : "", q_aiS3 : "organizer"})
+  continuations238[18].push({item : "238_Critical_VN19", s : "that the janitor who the organizer criticized every week /ignored the audience, /and it /was funny.", a : "x-x-x apart mid cent eat majored anti jack premieres parameters click yeah artery wall contains, ago vs jobs coast." , n : "CLAIM FACT", q : "The audience was ignored by the ______?", q_ac : "janitor", q_aiS1 : "", q_aiS3 : "organizer"})
  
-  continuations238[19].push({item : "238_Critical_VN20", s : "that the investor who the scientist detested /disappointed the entrepreneur, /and it /drove everyone crazy.", a : "x-x-x apart pre cent miss tolerate sir mom depending arousing ministries holy disabilities, fun camp cents consists mouth.", n : "CLAIM FACT", q : "The entrepreneur was disappointed by the ______?", q_ac : "investor", q_aiS1 : "", q_aiS3 : "scientist"})
-  continuations238[19].push({item : "238_Critical_VN20", s : "that the investor who the scientist detested /deceived the entrepreneur, /and it /drove everyone crazy.", a : "x-x-x apart pre cent miss tolerate sir mom depending arousing ministries holy disabilities, fun camp cents consists mouth." , n : "CLAIM FACT", q : "The entrepreneur was deceived by the ______?", q_ac : "investor", q_aiS1 : "", q_aiS3 : "scientist"})
+  continuations238[19].push({item : "238_Critical_VN20", s : "that the investor who the scientist consulted for years /disappointed the entrepreneur, /and it /drove everyone crazy.", a : "x-x-x apart mid hour walk trillion yeah dad depending sophomore kid weird thanksgiving ring disabilities, kids anti cents remember voice.", n : "CLAIM FACT", q : "The entrepreneur was disappointed by the ______?", q_ac : "investor", q_aiS1 : "", q_aiS3 : "scientist"})
+  continuations238[19].push({item : "238_Critical_VN20", s : "that the investor who the scientist consulted for years /deceived the entrepreneur, /and it /drove everyone crazy.", a : "x-x-x apart mid hour walk trillion yeah dad depending sophomore kid weird thanksgiving ring disabilities, kids anti cents remember voice." , n : "CLAIM FACT", q : "The entrepreneur was deceived by the ______?", q_ac : "investor", q_aiS1 : "", q_aiS3 : "scientist"})
  
-  continuations238[20].push({item : "238_Critical_VN21", s : "that the officer who the firefighter insulted /discouraged the homeowner, /but it /went unnoticed.", a : "x-x-x apart mid camp eat accelerates pre yes mutually twenties modules rate federated, miss vs gift disparity.", n : "CLAIM FACT", q : "The homeowner was discouraged by the ______?", q_ac : "officer", q_aiS1 : "", q_aiS3 : "firefighter"})
-  continuations238[20].push({item : "238_Critical_VN21", s : "that the officer who the firefighter insulted /saved the homeowner, /but it /went unnoticed.", a : "x-x-x apart mid camp eat accelerates pre yes mutually twenties modules rate federated, miss vs gift disparity." , n : "CLAIM FACT", q : "The homeowner was saved by the ______?", q_ac : "officer", q_aiS1 : "", q_aiS3 : "firefighter"})
+  continuations238[20].push({item : "238_Critical_VN21", s : "that the officer who the firefighter insulted viciously /discouraged the homeowner, /but it /went unnoticed.", a : "x-x-x apart pre cent know located mid wall cultivating formulas interplay earthquakes yes bulletins, luck ice gift phosphate.", n : "CLAIM FACT", q : "The homeowner was discouraged by the ______?", q_ac : "officer", q_aiS1 : "", q_aiS3 : "firefighter"})
+  continuations238[20].push({item : "238_Critical_VN21", s : "that the officer who the firefighter insulted viciously /saved the homeowner, /but it /went unnoticed.", a : "x-x-x apart pre cent know located mid wall cultivating formulas interplay earthquakes yes bulletins, luck ice gift phosphate." , n : "CLAIM FACT", q : "The homeowner was saved by the ______?", q_ac : "officer", q_aiS1 : "", q_aiS3 : "firefighter"})
  
-  continuations238[21].push({item : "238_Critical_VN22", s : "that the agent who the FBI sent /confused the criminal, /and it /was acknowledged.", a : "x-x-x gone pre cent miss forth mid ones TIL deep enjoying cup achieved, ball hill ice competitions.", n : "CLAIM FACT", q : "The criminal was confused by the ______?", q_ac : "agent", q_aiS1 : "", q_aiS3 : "FBI"})
-  continuations238[21].push({item : "238_Critical_VN22", s : "that the agent who the FBI sent /arrested the criminal, /and it /was acknowledged.", a : "x-x-x gone pre cent miss forth mid ones TIL deep enjoying cup achieved, ball hill ice competitions." , n : "CLAIM FACT", q : "The criminal was arrested by the ______?", q_ac : "agent", q_aiS1 : "", q_aiS3 : "FBI"})
+  continuations238[21].push({item : "238_Critical_VN22", s : "that the agent who the FBI sent to the scene /confused the criminal, /and it /was acknowledged.", a : "x-x-x yours pre cent eat aware holy hill PRAY lots cup ago weird potatoes wish includes, grow sun eye temperatures.", n : "CLAIM FACT", q : "The criminal was confused by the ______?", q_ac : "agent", q_aiS1 : "", q_aiS3 : "FBI"})
+  continuations238[21].push({item : "238_Critical_VN22", s : "that the agent who the FBI sent to the scene /arrested the criminal, /and it /was acknowledged.", a : "x-x-x yours pre cent eat aware holy hill PRAY lots cup ago weird potatoes wish includes, grow sun eye temperatures." , n : "CLAIM FACT", q : "The criminal was arrested by the ______?", q_ac : "agent", q_aiS1 : "", q_aiS3 : "FBI"})
   
-  continuations238[22].push({item : "238_Critical_VN23", s : "that the plumber who the apprentice consulted /puzzled the woman, /and it /was true.", a : "x-x-x apart cool cent walk flanked holy yeah deposition footsteps syllable mid shall, miss vs sea hill.", n : "CLAIM", q : "The woman was puzzled by the ______?", q_ac : "plumber", q_aiS1 : "", q_aiS3 : "apprentice"})
-  continuations238[22].push({item : "238_Critical_VN23", s : "that the plumber who the apprentice consulted /assisted the woman, /and it /was true.", a : "x-x-x apart cool cent walk flanked holy yeah deposition footsteps syllable mid shall, miss vs sea hill." , n : "CLAIM", q : "The woman was assisted by the ______?", q_ac : "plumber", q_aiS1 : "", q_aiS3 : "apprentice"})
+  continuations238[22].push({item : "238_Critical_VN23", s : "that the plumber who the apprentice consulted yesterday /puzzled the woman, /and it /was true.", a : "x-x-x yours mid jobs eat raining pre yeah showcasing psychosis awareness expanse goal shall, mark vs gay cent.", n : "CLAIM", q : "The woman was puzzled by the ______?", q_ac : "plumber", q_aiS1 : "", q_aiS3 : "apprentice"})
+  continuations238[22].push({item : "238_Critical_VN23", s : "that the plumber who the apprentice consulted yesterday /assisted the woman, /and it /was true.", a : "x-x-x yours mid jobs eat raining pre yeah showcasing psychosis awareness expanse goal shall, mark vs gay cent." , n : "CLAIM", q : "The woman was assisted by the ______?", q_ac : "plumber", q_aiS1 : "", q_aiS3 : "apprentice"})
 
-  continuations238[23].push({item : "238_Critical_VN24", s : "that the senator who the diplomat supported /troubled the opponent, /and it /deserved attention.", a : "x-x-x else foot jack miss discuss fun mid figuring breathing semester pre delivers, hour kids guessing chocolate.", n : "CLAIM FACT", q : "The opponent was troubled by the ______?", q_ac : "senator", q_aiS1 : "", q_aiS3 : "diplomat"})
-  continuations238[23].push({item : "238_Critical_VN24", s : "that the senator who the diplomat supported /defeated the opponent, /and it /deserved attention.", a : "x-x-x else foot jack miss discuss fun mid figuring breathing semester pre delivers, hour kids guessing chocolate." , n : "CLAIM FACT", q : "The opponent was defeated by the ______?", q_ac : "senator", q_aiS1 : "", q_aiS3 : "diplomat"})
+  continuations238[23].push({item : "238_Critical_VN24", s : "that the senator who the diplomat supported fully /troubled the opponent, /and it /deserved attention.", a : "x-x-x apart sick cent know realise kid fine figuring ourselves click headache bet crashing, kids wall composer happening.", n : "CLAIM FACT", q : "The opponent was troubled by the ______?", q_ac : "senator", q_aiS1 : "", q_aiS3 : "diplomat"})
+  continuations238[23].push({item : "238_Critical_VN24", s : "that the senator who the diplomat supported fully /defeated the opponent, /and it /deserved attention.", a : "x-x-x apart sick cent know realise kid fine figuring ourselves click headache bet crashing, kids wall composer happening." , n : "CLAIM FACT", q : "The opponent was defeated by the ______?", q_ac : "senator", q_aiS1 : "", q_aiS3 : "diplomat"})
 
-  continuations238[24].push({item : "238_Critical_VN25", s : "that the fiancé who the pastor met /startled the bride, /but it /did not surprise anyone.", a : "x-x-x else glad cent hear affirm holy jack beyond lake scramble app grams, pre vs sun yes downtown senate.", n : "CLAIM FACT", q : "The bride was startled by the ______?", q_ac : "fiancé", q_aiS1 : "", q_aiS3 : "pastor"})
-  continuations238[24].push({item : "238_Critical_VN25", s : "that the fiancé who the pastor met /married the bride, /but it /did not surprise anyone.", a : "x-x-x else glad cent hear affirm holy jack beyond lake scramble app grams, pre vs sun yes downtown senate." , n : "CLAIM FACT", q : "The bride was married by the ______?", q_ac : "fiancé", q_aiS1 : "", q_aiS3 : "pastor"})
+  continuations238[24].push({item : "238_Critical_VN25", s : "that the fiancé who the pastor met this afternoon /startled the bride, /and it /did not surprise anyone.", a : "x-x-x apart mid cent app astray mark pre evenly lake hill ourselves reactors term lasts, goal vs miss pro episodes latest.", n : "CLAIM FACT", q : "The bride was startled by the ______?", q_ac : "fiancé", q_aiS1 : "", q_aiS3 : "pastor"})
+  continuations238[24].push({item : "238_Critical_VN25", s : "that the fiancé who the pastor met this afternoon /married the bride, /and it /did not surprise anyone.", a : "x-x-x apart mid cent app astray mark pre evenly lake hill ourselves reactors term lasts, goal vs miss pro episodes latest." , n : "CLAIM FACT", q : "The bride was married by the ______?", q_ac : "fiancé", q_aiS1 : "", q_aiS3 : "pastor"})
 
-  continuations238[25].push({item : "238_Critical_VN26", s : "that the businessman who the exectutives backed /surprised the employee, /and it /came as a disappointment.", a : "x-x-x formulated hair hour eat accommodate jack hill unaware angels kitchen wall diabetes, pass lie male join nor concentrations.", n : "CLAIM FACT ACCUSATION", q : "The employee was surprised by the ______?", q_ac : "businessman", q_aiS1 : "", q_aiS3 : "exectutives"})
-  continuations238[25].push({item : "238_Critical_VN26", s : "that the businessman who the exectutives backed /punished the employee, /and it /came as a disappointment.", a : "x-x-x formulated hair hour eat accommodate jack hill unaware angels kitchen wall diabetes, pass lie male join nor concentrations." , n : "CLAIM FACT ACCUSATION", q : "The employee was punished by the ______?", q_ac : "businessman", q_aiS1 : "", q_aiS3 : "exectutives"})
+  continuations238[25].push({item : "238_Critical_VN26", s : "that the businessman who the exectutives backed wholeheartedly /surprised the employee, /and it /came as a disappointment.", a : "x-x-x apart pre cent walk criticizing fun guy symbolising autumn meteorological hilarious bed survived, hill jack baby wear uses considerations.", n : "CLAIM FACT ACCUSATION", q : "The employee was surprised by the ______?", q_ac : "businessman", q_aiS1 : "", q_aiS3 : "exectutives"})
+  continuations238[25].push({item : "238_Critical_VN26", s : "that the businessman who the exectutives backed wholeheartedly /punished the employee, /and it /came as a disappointment.", a : "x-x-x apart pre cent walk criticizing fun guy symbolising autumn meteorological hilarious bed survived, hill jack baby wear uses considerations." , n : "CLAIM FACT ACCUSATION", q : "The employee was punished by the ______?", q_ac : "businessman", q_aiS1 : "", q_aiS3 : "exectutives"})
 
-  continuations238[26].push({item : "238_Critical_VN27", s : "that the repairman who the neighbor caught /enraged the woman, /and it /broke her family's heart.", a : "x-x-x substrates dad cent bag watts holy mid renewable bottom resorts drop shall, pre jack click app deployed users.", n : "CLAIM FACT ACCUSATION", q : "The woman was enraged by the ______?", q_ac : "repairman", q_aiS1 : "", q_aiS3 : "neighbor"})
-  continuations238[26].push({item : "238_Critical_VN27", s : "that the repairman who the neighbor caught /robbed the woman, /and it /broke her family's heart.", a : "x-x-x substrates dad cent bag watts holy mid renewable bottom resorts drop shall, pre jack click app deployed users." , n : "CLAIM FACT ACCUSATION", q : " The woman was robbed by the ______?", q_ac : "repairman", q_aiS1 : "", q_aiS3 : "neighbor"})
+  continuations238[26].push({item : "238_Critical_VN27", s : "that the repairman who the neighbor caught last night /enraged the woman, /and it /broke her family's heart.", a : "x-x-x apart mid cent app semesters glad pre secondly inches lots truth roadway seat shall, guy vs brand hear deployed users.", n : "CLAIM FACT ACCUSATION", q : "The woman was enraged by the ______?", q_ac : "repairman", q_aiS1 : "", q_aiS3 : "neighbor"})
+  continuations238[26].push({item : "238_Critical_VN27", s : "that the repairman who the neighbor caught last night /robbed the woman, /and it /broke her family's heart.", a : "x-x-x apart mid cent app semesters glad pre secondly inches lots truth roadway seat shall, guy vs brand hear deployed users." , n : "CLAIM FACT ACCUSATION", q : " The woman was robbed by the ______?", q_ac : "repairman", q_aiS1 : "", q_aiS3 : "neighbor"})
 
-  continuations238[27].push({item : "238_Critical_VN28", s : "that the criminal who the stranger distracted /baffled the officer, /and it /seemed concerning.", a : "x-x-x childbirth sea hour jack anywhere fat mom moreover adjustment fossils yeah follows, pre cent liquid referendum.", n : "CLAIM FACT ACCUSATION", q : "The officer was baffled by the ______?", q_ac : "criminal", q_aiS1 : "", q_aiS3 : "stranger"})
-  continuations238[27].push({item : "238_Critical_VN28", s : "that the criminal who the stranger distracted /abducted the officer, /and it /seemed concerning.", a : "x-x-x childbirth sea hour jack anywhere fat mom moreover adjustment fossils yeah follows, pre cent liquid referendum." , n : "CLAIM FACT ACCUSATION", q : "The officer was abducted by the ______?", q_ac : "criminal", q_aiS1 : "", q_aiS3 : "stranger"})
+  continuations238[27].push({item : "238_Critical_VN28", s : "that the criminal who the stranger saw this evening /baffled the officer, /and it /seemed concerning.", a : "x-x-x apart sick cent know gorgeous yes cool indicate wide yeah winners stellar seat anymore, miss app movies percentage.", n : "CLAIM FACT ACCUSATION", q : "The officer was baffled by the ______?", q_ac : "criminal", q_aiS1 : "", q_aiS3 : "stranger"})
+  continuations238[27].push({item : "238_Critical_VN28", s : "that the criminal who the stranger saw this evening /abducted the officer, /and it /seemed concerning.", a : "x-x-x apart sick cent know gorgeous yes cool indicate wide yeah winners stellar seat anymore, miss app movies percentage." , n : "CLAIM FACT ACCUSATION", q : "The officer was abducted by the ______?", q_ac : "criminal", q_aiS1 : "", q_aiS3 : "stranger"})
 
-  continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed /terrified the clerk, /and it /was very believable.", a : "x-x-x apart mid cent walk enjoying lake holy pierce prestige peninsula sad hangs, hill sun vote jack patrolling.", n : "CLAIM", q : "The clerk was terrified by the ______?", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
-  continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed /contacted the clerk, /and it /was very believable.", a : "x-x-x apart mid cent walk enjoying lake holy pierce prestige peninsula sad hangs, hill sun vote jack patrolling." , n : "CLAIM", q : "The clerk was contacted by the ______?", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
+  continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed kindly /terrified the clerk, /and it /was verified yesterday.", a : "x-x-x apart sick hour app enjoying pre why depict factions raging courtroom anti exams, hill vs dad rankings democrats.", n : "CLAIM", q : "The clerk was terrified by the ______?", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
+  continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed kindly /contacted the clerk, /and it /was verified yesterday.", a : "x-x-x apart sick hour app enjoying pre why depict factions raging courtroom anti exams, hill vs dad rankings democrats." , n : "CLAIM", q : "The clerk was contacted by the ______?", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
    
-  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed /concerned the president, /and it /caused unrest.", a : "x-x-x apart mid hall eat depending kid yeah ourselves boyfriend box streets adventure, dad cent suspense wonder.", n : "CLAIM FACT", q : "The secretary was concerned by the ______?", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
-  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed /fired the president, /and it /caused unrest.", a : "x-x-x apart mid hall eat depending kid yeah ourselves boyfriend box streets adventure, dad cent suspense wonder." , n : "CLAIM FACT", q : "The secretary was fired by the ______?", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
+  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /concerned the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor.", n : "CLAIM FACT", q : "The secretary was concerned by the ______?", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
+  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /fired the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor." , n : "CLAIM FACT", q : "The secretary was fired by the ______?", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
 
-  continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed /appalled everyone, /and it /gave John the chills.", a : "x-x-x else mom cent eat recognizes pre kid loudly soften extent pharmacy cup episodes, bag hill hear Walk yeah filler.", n : "CLAIM FACT", q : "Everyone was appalled by the ______?", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
-  continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed /detested everyone, /and it /gave John the chills.", a : "x-x-x else mom cent eat recognizes pre kid loudly soften extent pharmacy cup episodes, bag hill hear Walk yeah filler." , n : "CLAIM FACT", q : "Everyone was detested by the ______??", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
+  continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed for years /appalled everyone, /and it /gave John the chills.", a : "x-x-x apart pre hour eat accomplish fat cat airbags setups yeah stuff vascular addition, lake jack hill Cent sale piping.", n : "CLAIM FACT", q : "Everyone was appalled by the ______?", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
+  continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed for years /detested everyone, /and it /gave John the chills.", a : "x-x-x apart pre hour eat accomplish fat cat airbags setups yeah stuff vascular addition, lake jack hill Cent sale piping." , n : "CLAIM FACT", q : "Everyone was detested by the ______??", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
     
-  continuations238[31].push({item : "238_Critical_VN32", s : "that the carpenter who the craftsman taught /interested the apprentice, /and it /came as a disappointment.", a : "x-x-x benefiting sea hour eat calculate mid mom lifetimes weekend blog app punishable, hate vs jack dad miss municipalities.", n : "CLAIM FACT ACCUSATION", q : "The apprentice was interested in the ______?", q_ac : "carpenter", q_aiS1 : "", q_aiS3 : "craftsman"})
-  continuations238[31].push({item : "238_Critical_VN32", s : "that the carpenter who the craftsman taught /hurt the apprentice, /and it /came as a disappointment.", a : "x-x-x benefiting sea hour eat calculate mid mom lifetimes weekend blog app punishable, hate vs jack dad miss municipalities." , n : "CLAIM FACT ACCUSATION", q : "The apprentice was hurt by the ______?", q_ac : "carpenter", q_aiS1 : "", q_aiS3 : "craftsman"})
+  continuations238[31].push({item : "238_Critical_VN32", s : "that the carpenter who the craftsman taught for decades /interested the apprentice, /and it /came as a disappointment.", a : "x-x-x apart jobs cent eat gardening mid cat visualize planet yeah centers apartments spot flashbacks, hate hill anti die app municipalities.", n : "CLAIM FACT ACCUSATION", q : "The apprentice was interested in the ______?", q_ac : "carpenter", q_aiS1 : "", q_aiS3 : "craftsman"})
+  continuations238[31].push({item : "238_Critical_VN32", s : "that the carpenter who the craftsman taught for decades /hurt the apprentice, /and it /came as a disappointment.", a : "x-x-x apart jobs cent eat gardening mid cat visualize planet yeah centers apartments spot flashbacks, hate hill anti die app municipalities." , n : "CLAIM FACT ACCUSATION", q : "The apprentice was hurt by the ______?", q_ac : "carpenter", q_aiS1 : "", q_aiS3 : "craftsman"})
 
-  continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO trusted /frightened the shareholders, /and it /seemed concerning.", a : "x-x-x configured sea camp eat whereas fun sir TIL tourist subsidies cent accountable, miss jack movies referendum.", n : "CLAIM FACT ACCUSATION", q : "The shareholders were frightened by the ______?", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
-  continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO trusted /met the shareholders, /and it /seemed concerning.", a : "x-x-x configured sea camp eat whereas fun sir TIL tourist subsidies cent accountable, miss jack movies referendum." , n : "CLAIM FACT ACCUSATION", q : "The shareholders were met by the ______?", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
+  continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO fired last week /frightened the shareholders, /and it /seemed concerning.", a : "x-x-x apart pre cent eat whereby hill wild VARY parks glad holy repertoire lake nevertheless, jack sun movies profession.", n : "CLAIM FACT ACCUSATION", q : "The shareholders were frightened by the ______?", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
+  continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO fired last week /met the shareholders, /and it /seemed concerning.", a : "x-x-x apart pre cent eat whereby hill wild VARY parks glad holy repertoire lake nevertheless, jack sun movies profession." , n : "CLAIM FACT ACCUSATION", q : "The shareholders were met by the ______?", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
     
-  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the foreman looked for /irritated the shepherd, /but it /proved to be made up.", a : "x-x-x apart pre cent rose admire mid guy flanked videos ring madness week pandemic, anti jack pocket sit card guys app.", n : "CLAIM ACCUSATION", q : "The shepherd was irritated by the ______?", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "foreman"})
-  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the foreman looked for /questioned the shepherd, /but it /proved to be made up.", a : "x-x-x apart pre cent rose admire mid guy flanked videos ring madness week pandemic, anti jack pocket sit card guys app." , n : "CLAIM ACCUSATION", q : "The shepard was questioned by the ______?", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "foreman"})
+  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /irritated the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes.", n : "CLAIM ACCUSATION", q : "The shepherd was irritated by the ______?", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "foreman"})
+  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /questioned the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes." , n : "CLAIM ACCUSATION", q : "The shepard was questioned by the ______?", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "foreman"})
     
-  continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved /distracted the customer, /and it /sounded surprising.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability.", n : "CLAIM FACT", q : "The customer was distracted by the ______?", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
-  continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved /interrogated the customer, /and it /sounded surprising.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability." , n : "CLAIM FACT", q : "The customer was interrogated by the ______?", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
+  continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved for years /distracted the customer, /and it /sounded surprising.", a : "x-x-x apart sick cent miss showcasing sad pre minus basic lots scale incentives lake occurred, goal sun marines interstate.", n : "CLAIM FACT", q : "The customer was distracted by the ______?", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
+  continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved for years /interrogated the customer, /and it /sounded surprising.", a : "x-x-x apart sick cent miss showcasing sad pre minus basic lots scale incentives lake occurred, goal sun marines interstate." , n : "CLAIM FACT", q : "The customer was interrogated by the ______?", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
 
-  continuations238[35].push({item : "238_Critical_VN36", s : "that the presenter who the host loved /bored the audience, /and it /sounded awkward.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability.", n : "CLAIM FACT", q : "The audience was bored by the ______?", q_ac : "presenter", q_aiS1 : "", q_aiS3 : "host"})
-  continuations238[35].push({item : "238_Critical_VN36", s : "that the presenter who the host loved /hated the audience, /and it /sounded awkward.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability." , n : "CLAIM FACT", q : "The audience was hated by the ______?", q_ac : "presenter", q_aiS1 : "", q_aiS3 : "host"})
-
-  continuations238[36].push({item : "238_Critical_VN37", s : "that the researcher who the reviewers respected /intrigued the professor, /and it /seemed concerning.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability.", n : "CLAIM FACT", q : "The professor was intrigued by the ______?", q_ac : "researcher", q_aiS1 : "", q_aiS3 : "reviewers"})
-  continuations238[36].push({item : "238_Critical_VN37", s : "that the researcher who the reviewers respected /plagiarized the professor, /and it /seemed concerning.", a : "x-x-x yours sick cent miss conversely pre wild moreover lake complexity mid achieved, hill vs hardest capability." , n : "CLAIM FACT", q : "The professor was plagiarized by the ______?", q_ac : "researcher", q_aiS1 : "", q_aiS3 : "reviewers"})
+  continuations238[35].push({item : "238_Critical_VN36", s : "that the researcher who the reviewers evaluated positively /intrigued the professor, /and it /seemed concerning.", a : "x-x-x apart mid cent know comprehend pre dad encompass fireworks procession abolition trip celebrate, ago hill dinner referendum.", n : "CLAIM FACT", q : "The professor was intrigued by the ______?", q_ac : "researcher", q_aiS1 : "", q_aiS3 : "reviewers"})
+  continuations238[35].push({item : "238_Critical_VN36", s : "that the researcher who the reviewers evaluated positively /plagiarized the professor, /and it /seemed concerning.", a : "x-x-x apart mid cent know comprehend pre dad encompass fireworks procession abolition trip celebrate, ago hill dinner referendum." , n : "CLAIM FACT", q : "The professor was plagiarized by the ______?", q_ac : "researcher", q_aiS1 : "", q_aiS3 : "reviewers"})
 
   
-  for(i=0; i<37; i++) {
+  for(i=0; i<36; i++) {
 	  for(j=0; j<2; j++) {
 		  s = continuations238[i][j].s.split(" ");
 		  regions = [];
@@ -782,7 +760,7 @@ if (!Array.prototype.includes) {
 	  fillers[i].item = "Filler_"+i
   }
   
-	  practice = [];
+  practice = [];
   
   practice.push({s:"The semester will start next week, but the students and teachers are not ready. semester", a:"x-x-x thrives anti wages body sold, sin sky entitled sky concrete oil him goods. students", q : "The ______ will start next week?", q_ac : "semester", q_aiS1 : "exams", q_aiS3 : "punishment", practice : true})
   practice.push({s:"The mother of the prisoner sent him packages that contained cookies and novels. prisoner", a:"x-x-x defraud dry arm amounted rare nor rhythmic fund authority blossom me defect. cookies", q : "The mother sent packages to the ______?", q_ac : "prisoner", q_aiS1 : "cookies", q_aiS3 : "novels", practice : true})
@@ -793,6 +771,9 @@ if (!Array.prototype.includes) {
 	  practice[i].condition = "filler"
 	  practice[i].item = "Practice_"+i
   }
+
+  control_fillers = [];
+  
   
   
   
