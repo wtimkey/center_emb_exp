@@ -842,60 +842,24 @@ if (!Array.prototype.includes) {
 	  practice[i].item = "Practice_"+i
   }
 
-
-  
-  
-  
-  
-  function separatedShuffle(x, y) {
-	  indices_x = [...Array(x.length).keys()].map(function(x){ return ["x",x]})
-	  indices_y = [...Array(y.length).keys()].map(function(x){ return ["y",x]})
-	  //if(indices_x.length <= indices_y.length+5) {
-		//  CRASH()
-	  //}
-	  console.log(indices_x);
-	  console.log(indices_y);
-	  result = indices_x.concat(indices_y);
-	  attempts_order = 0;
-	  console.log("SHUFFLING");
-	  result = _.shuffle(result);
-	  for(i=0; i+1<result.length; i++) {
-		  if(result[i][0] == "y" && result[i+1][0] == "y") {
-			  candidate_positions = [];
-					  for(j=0; j+2<result.length; j++) {
-							 if(result[j][0] == "x" && result[j+1][0] == "x" && result[j+2][0] == "x") {
-					 candidate_positions.push(j+1);
-				 }
-			  }
-			  console.log(i, "CANDIDATES", candidate_positions);
-			  SELECTED_NEW_POSITION = _.sample(candidate_positions, 1)[0];
-			  X = result[i];
-			  Y = result[SELECTED_NEW_POSITION]
-			  result[SELECTED_NEW_POSITION] = X;
-			  result[i] = Y;
-		  }
-	  }
-	  for(i=0; i+1<result.length; i++) {
-		  if(result[i][0] == "y" && result[i+1][0] == "y") {
-			  console.log("THIS SHOULD NOT HAPPEN", i);
-		  }
-	  }
-	  result_ = []
-	  for(i = 0; i<result.length; i++) {
-		  if(result[i][0] == "x") {
-			  result_.push(x[result[i][1]]);
-		  } else {
-			  result_.push(y[result[i][1]]);
-		  }
-	  }
-	  return result_;
+  selected_stims = _.sample(fillers, 24).concat(criticalChosen)
+  successful_shuffle = true;
+  while(!successful_shuffle){
+	selected_stims = _.shuffle(selected_stims)
+	for(i=0; i < selected_stims.length-1; i++){
+		if(selected_stims[i].condition.slice(0, 'control_filler_'.length) == 'control_filler_'){
+			successful_shuffle = successful_shuffle & (selected_stims[i].item != selected_stims[i+1].item)
+		}
+		else if(selected_stims[i].condition.slice(0, "critical_".length) == "critical_"){
+			successful_shuffle = successful_shuffle & (selected_stims[i+1].condition.slice(0, "critical_".length) != "critical_")
+		}
+	}
   }
   
-  console.log("CRITICAL", criticalChosen);
   
-  fillersAndCritical = separatedShuffle(_.sample(fillers, 24), criticalChosen);
+  fillersAndCritical = selected_stims
   
-  fullStimuli = practice.concat(fillersAndCritical);
+  fullStimuli = practice.concat(selected_stims);
   
   item_ids = [];
   
