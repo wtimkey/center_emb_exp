@@ -460,8 +460,8 @@ if (!Array.prototype.includes) {
   continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed kindly /terrified the clerk, /and it /was verified yesterday.", a : "x-x-x apart sick hour app enjoying pre why depict factions raging courtroom anti exams, hill vs dad rankings democrats.", n : "CLAIM", q : "The clerk was terrified by the ______?", unselected_verb : "contacted", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
   continuations238[28].push({item : "238_Critical_VN29", s : "that the customer who the vendor welcomed kindly /contacted the clerk, /and it /was verified yesterday.", a : "x-x-x apart sick hour app enjoying pre why depict factions raging courtroom anti exams, hill vs dad rankings democrats." , n : "CLAIM", q : "The clerk was contacted by the ______?", unselected_verb : "terrified", q_ac : "customer", q_aiS1 : "", q_aiS3 : "vendor"})
    
-  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /concerned the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor.", n : "CLAIM FACT", q : "The secretary was concerned by the ______?", unselected_verb : "fired", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
-  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /fired the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor." , n : "CLAIM FACT", q : "The secretary was fired by the ______?", unselected_verb : "concerned", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
+  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /concerned the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor.", n : "CLAIM FACT", q : "The president was concerned by the ______?", unselected_verb : "fired", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
+  continuations238[29].push({item : "238_Critical_VN30", s : "that the people who the staffer appointed this month /fired the president, /and it /caused unrest.", a : "x-x-x apart mid hour eat except jack why nonstop satellite yeah sorry awareness hill meanwhile, fun anti mobile tailor." , n : "CLAIM FACT", q : "The president was fired by the ______?", unselected_verb : "concerned", q_ac : "people", q_aiS1 : "", q_aiS3 : "staffer"})
 
   continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed for years /appalled everyone, /and it /gave John the chills.", a : "x-x-x apart pre hour eat accomplish fat cat airbags setups yeah stuff vascular addition, lake jack hill Cent sale piping.", n : "CLAIM FACT", q : "Everyone was appalled by the ______?", unselected_verb : "detested", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
   continuations238[30].push({item : "238_Critical_VN31", s : "that the politician who the mobster bribed for years /detested everyone, /and it /gave John the chills.", a : "x-x-x apart pre hour eat accomplish fat cat airbags setups yeah stuff vascular addition, lake jack hill Cent sale piping." , n : "CLAIM FACT", q : "Everyone was detested by the ______??", unselected_verb : "appalled", q_ac : "politician", q_aiS1 : "", q_aiS3 : "mobster"})
@@ -472,8 +472,8 @@ if (!Array.prototype.includes) {
   continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO fired last week /frightened the shareholders, /and it /seemed concerning.", a : "x-x-x apart pre cent eat whereby hill wild VARY parks glad holy repertoire lake nevertheless, jack sun movies profession.", n : "CLAIM FACT ACCUSATION", q : "The shareholders were frightened by the ______?", unselected_verb : "met", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
   continuations238[32].push({item : "238_Critical_VN33", s : "that the analyst who the CEO fired last week /met the shareholders, /and it /seemed concerning.", a : "x-x-x apart pre cent eat whereby hill wild VARY parks glad holy repertoire lake nevertheless, jack sun movies profession." , n : "CLAIM FACT ACCUSATION", q : "The shareholders were met by the ______?", unselected_verb : "frightened", q_ac : "analyst", q_aiS1 : "", q_aiS3 : "CEO"})
     
-  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /irritated the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes.", n : "CLAIM ACCUSATION", q : "The shepherd was irritated by the ______?", unselected_verb : "questioned", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "landlord"})
-  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /questioned the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes." , n : "CLAIM ACCUSATION", q : "The shepard was questioned by the ______?", unselected_verb : "irritated", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "landlord"})
+  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /irritated the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes.", n : "CLAIM ACCUSATION", q : "The neighbors were irritated by the ______?", unselected_verb : "questioned", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "landlord"})
+  continuations238[33].push({item : "238_Critical_VN34", s : "that the tenant who the landlord spoke to yesterday /questioned the neighbors, /but it /proved to be valid.", a : "x-x-x apart sick cent eat closes dad guy teamwork facts soul fantastic brightest trip comprised, ago jack finger bill god modes." , n : "CLAIM ACCUSATION", q : "The neighbors were questioned by the ______?", unselected_verb : "irritated", q_ac : "tenant", q_aiS1 : "", q_aiS3 : "landlord"})
     
   continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved for years /distracted the customer, /and it /sounded surprising.", a : "x-x-x apart sick cent miss showcasing sad pre minus basic lots scale incentives lake occurred, goal sun marines interstate.", n : "CLAIM FACT", q : "The customer was distracted by the ______?", unselected_verb : "interrogated", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
   continuations238[34].push({item : "238_Critical_VN35", s : "that the pharmacist who the clerk loved for years /interrogated the customer, /and it /sounded surprising.", a : "x-x-x apart sick cent miss showcasing sad pre minus basic lots scale incentives lake occurred, goal sun marines interstate." , n : "CLAIM FACT", q : "The customer was interrogated by the ______?", unselected_verb : "distracted", q_ac : "pharmacist", q_aiS1 : "", q_aiS3 : "clerk"})
@@ -731,24 +731,32 @@ if (!Array.prototype.includes) {
 	filler_foils = curr_foils.slice(0, 2);
 	for (j=0; j<curr_regions.length; j++){
 		if((!curr_regions[j].startsWith("REGION_W0")) && (!curr_regions[j].startsWith("REGION_0")) && (!curr_regions[j].startsWith("REGION_1")) && (!curr_regions[j].startsWith("REGION_3") && (!curr_regions[j].startsWith("REGION_4")))){
-			filler_regions.push(curr_regions[j])
+			filler_regions.push(curr_regions[j]);
 			if(curr_regions[j] == "REGION_2_0"){
-				filler_words.push(curr_verb)
+				filler_words.push(curr_verb);
 			}
 			else{
-				filler_words.push(curr_words[j].replace(",", ""))
+				filler_words.push(curr_words[j].replace(",", ""));
 			}
-			filler_foils.push(curr_foils[j+2].replace(",", ""))
+			filler_foils.push(curr_foils[j+2].replace(",", ""));
 		}
 	}
-	filler_words[filler_words.length-1] = filler_words[filler_words.length-1] + "."
-	filler_foils[filler_foils.length-1] = filler_foils[filler_foils.length-1] + "."
-	filler_regions.push("REGION_CQ")
-	filler_words.push(".")
-	filler_foils.push(".")
-	curr_item.s = filler_words.join(" ")
-	curr_item.r = filler_regions.join(" ")
-	curr_item.a = filler_foils.join(" ")
+	filler_words[filler_words.length-1] = filler_words[filler_words.length-1] + ".";
+	filler_foils[filler_foils.length-1] = filler_foils[filler_foils.length-1] + ".";
+	filler_regions.push("REGION_CQ");
+	filler_words.push(".");
+	filler_foils.push(".");
+	curr_item.s = filler_words.join(" ");
+	curr_item.r = filler_regions.join(" ");
+	curr_item.a = filler_foils.join(" ");
+	curr_item.q = curr_item.q.split(' ');
+	curr_item.q = curr_item.q.slice(0, curr_item.q.length-4) + curr_verb + curr_item.q.slice(curr_item.q.length-3, curr_item.q.length-1);
+	curr_item.q = curr_item.q.join(" ");
+	if(use_n1_subj){
+		og_n2 = curr_item.q_ac;
+		curr_item.q_ac = curr_subj;
+		curr_item.q_aiS1 = og_n2;
+	}
 	curr_item.condition = 'control_filler_' + curr_item.condition
 	control_fillers.push(curr_item)
   }
