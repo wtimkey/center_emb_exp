@@ -850,6 +850,7 @@ if (!Array.prototype.includes) {
 	for(i=0; i < selected_stims.length-1; i++){
 		if(selected_stims[i].condition.slice(0, 'control_filler_'.length) == 'control_filler_'){
 			successful_shuffle = successful_shuffle & (selected_stims[i].item != selected_stims[i+1].item)
+			successful_shuffle = successful_shuffle & (selected_stims[i].condition.slice(0, 'control_filler_'.length) == 'control_filler_')
 		}
 		else if(selected_stims[i].condition.slice(0, "critical_".length) == "critical_"){
 			successful_shuffle = successful_shuffle & (selected_stims[i+1].condition.slice(0, "critical_".length) != "critical_")
