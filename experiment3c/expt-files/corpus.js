@@ -530,7 +530,7 @@ if (!Array.prototype.includes) {
   
   
   continuationsChosen = _.shuffle(continuations);
-  continuationsChosen = continuationsChosen.slice(0, topNouns.length);
+  continuationsChosen = continuationsChosen.slice(0, conditionAssignment.length);
   console.log(continuationsChosen);
   
   
@@ -592,12 +592,12 @@ if (!Array.prototype.includes) {
   console.log(topNouns);
   conditionAssignment = _.shuffle(conditionAssignment);
   
-  continuations = nounsAndVerbsAssignment;
+  continuations = JSON.parse(JSON.stringify(nounsAndVerbsAssignment));
   console.log(conditionAssignment);
   
   conditions_chosen = [];
   continuationsChosen = []
-  for(i = 0; i<conditionAssignment.length; i++) {
+  for(i = 0; i<continuationsChosen.length; i++) {
 	  continuations[i][0].noun = topNouns[i];
 	  continuations[i][1].noun = topNouns[i];
 	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s + " .";
