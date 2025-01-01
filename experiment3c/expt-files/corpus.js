@@ -597,7 +597,7 @@ if (!Array.prototype.includes) {
   
   conditions_chosen = [];
   continuationsChosen = []
-  for(i = 0; i<continuations.length; i++) {
+  for(i = 0; i<conditionAssignment.length; i++) {
 	  continuations[i][0].noun = topNouns[i];
 	  continuations[i][1].noun = topNouns[i];
 	  continuations[i][0].s = "The "+topNouns[i]+" was "+continuations[i][0].s + " .";
