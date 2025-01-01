@@ -843,8 +843,9 @@ if (!Array.prototype.includes) {
   }
 
   selected_stims = _.sample(fillers, 24).concat(criticalChosen)
-  successful_shuffle = true;
-  do{
+  successful_shuffle = false;
+  while(!successful_shuffle){
+	successful_shuffle = true;
 	selected_stims = _.shuffle(selected_stims)
 	for(i=0; i < selected_stims.length-1; i++){
 		if(selected_stims[i].condition.slice(0, 'control_filler_'.length) == 'control_filler_'){
@@ -854,7 +855,7 @@ if (!Array.prototype.includes) {
 			successful_shuffle = successful_shuffle & (selected_stims[i+1].condition.slice(0, "critical_".length) != "critical_")
 		}
 	}
-  } while(!successful_shuffle);
+  }
   
   
   fillersAndCritical = selected_stims
