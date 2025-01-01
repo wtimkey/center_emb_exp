@@ -736,9 +736,9 @@ if (!Array.prototype.includes) {
 				filler_words.push(curr_verb)
 			}
 			else{
-				filler_words.push(filler_words[j].replace(",", ""))
+				filler_words.push(curr_words[j].replace(",", ""))
 			}
-			filler_foils.push(filler_foils[j+2].replace(",", ""))
+			filler_foils.push(curr_foils[j+2].replace(",", ""))
 		}
 	}
 	curr_item.s = filler_words.join(" ")
