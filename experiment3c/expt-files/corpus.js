@@ -761,6 +761,8 @@ if (!Array.prototype.includes) {
 	control_fillers.push(curr_item)
   }
 
+  control_fillers = _.shuffle(control_fillers)
+  criticalChosen = criticalChosen.concat(control_fillers)
   //todo: fix comp questions of these fillers by swapping the verb; and fix answers so that correct answer is actually correct, add compq region to end
   
   
@@ -891,7 +893,7 @@ if (!Array.prototype.includes) {
   
   console.log("CRITICAL", criticalChosen);
   
-  fillersAndCritical = separatedShuffle(_.sample(fillers, 36), criticalChosen);
+  fillersAndCritical = separatedShuffle(_.sample(fillers, 24), criticalChosen);
   
   fullStimuli = practice.concat(fillersAndCritical);
   
