@@ -850,9 +850,9 @@ if (!Array.prototype.includes) {
   function separatedShuffle(x, y) {
 	  indices_x = [...Array(x.length).keys()].map(function(x){ return ["x",x]})
 	  indices_y = [...Array(y.length).keys()].map(function(x){ return ["y",x]})
-	  if(indices_x.length <= indices_y.length+5) {
-		  CRASH()
-	  }
+	  //if(indices_x.length <= indices_y.length+5) {
+		//  CRASH()
+	  //}
 	  console.log(indices_x);
 	  console.log(indices_y);
 	  result = indices_x.concat(indices_y);
