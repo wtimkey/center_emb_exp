@@ -740,9 +740,10 @@ if (!Array.prototype.includes) {
 			filler_foils.push(filler_foils[j+2].replace(",", ""))
 		}
 	}
-	curr_item.s = curr_words.join(" ")
-	curr_item.r = curr_regions.join(" ")
-	curr_item.a = curr_foils.join(" ")
+	curr_item.s = filler_words.join(" ")
+	curr_item.r = filler_regions.join(" ")
+	curr_item.a = filler_foils.join(" ")
+	control_fillers.push(curr_item)
   }
 
   //todo: fix comp questions of these fillers by swapping the verb; and fix answers so that correct answer is actually correct
