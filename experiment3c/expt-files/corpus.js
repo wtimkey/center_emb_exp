@@ -843,8 +843,10 @@ if (!Array.prototype.includes) {
   }
 
   selected_stims = _.sample(fillers, 24).concat(criticalChosen)
+  num_failures = -1;
   successful_shuffle = false;
   while(!successful_shuffle){
+	num_failures += 1;
 	successful_shuffle = true;
 	selected_stims = _.shuffle(selected_stims)
 	for(i=0; i < selected_stims.length-1; i++){
@@ -857,7 +859,8 @@ if (!Array.prototype.includes) {
 		}
 	}
   }
-  
+  console.log("num shuffle failures: ");
+  console.log( num_failures);
   
   fillersAndCritical = selected_stims
   
