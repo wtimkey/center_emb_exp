@@ -730,7 +730,7 @@ if (!Array.prototype.includes) {
 	filler_words = ["The", curr_subj];
 	filler_foils = curr_foils.slice(0, 2);
 	for (j=0; j<curr_regions.length; j++){
-		if((!curr_regions[j].startsWith("REGION_W0")) && (!curr_regions[j].startsWith("REGION_1")) && (!curr_regions[j].startsWith("REGION_3") && (!curr_regions[j].startsWith("REGION_4")))){
+		if((!curr_regions[j].startsWith("REGION_W0")) && (!curr_regions[j].startsWith("REGION_0")) && (!curr_regions[j].startsWith("REGION_1")) && (!curr_regions[j].startsWith("REGION_3") && (!curr_regions[j].startsWith("REGION_4")))){
 			filler_regions.push(curr_regions[j])
 			if(curr_regions[j] == "REGION_2_0"){
 				filler_words.push(curr_verb)
