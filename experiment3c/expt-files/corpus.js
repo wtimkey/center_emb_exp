@@ -715,10 +715,10 @@ if (!Array.prototype.includes) {
 	curr_condition = curr_item.condition;
 	use_n1_subj = control_filler_condition_ordering[curr_condition] & (!control_filler_condition_seen[curr_condition])
 	if(use_n1_subj){
-		curr_subj = curr_condition.noun
+		curr_subj = curr_item.noun
 	}
 	else{
-		curr_subj = curr_condition.q_ac
+		curr_subj = curr_item.q_ac
 	}
 	curr_verb = curr_item.unselected_verb
 	control_filler_condition_seen[curr_condition] = true;
