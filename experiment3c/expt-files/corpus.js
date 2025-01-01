@@ -392,7 +392,7 @@ if (!Array.prototype.includes) {
   continuations238[5].push({item : "238_Critical_VN6", s : "that the psychiatrist who the surgeon assisted for hours /diagnosed the patient, /and it /became widely known.",a : "x-x-x apart sick cent miss supplemented hill wind formats monetary draw weird fragrance vote reached, fun app winner remind wants." , n : "CLAIM FACT", q : "The patient was diagnosed by the ______?", unselected_verb : "horrified", q_ac : "psychiatrist", q_aiS1 : "", q_aiS3 : "surgeon"})
   
   continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called at breakfast /amazed the tourist, /and it /was absolutely true.",a : "x-x-x apart mid jobs eat along how yeah yours stupid same reduction sexism door jointly, ago vs pre depression cent.", n : "CLAIM", q : "The tourist was amazed by the ______?", unselected_verb : "phoned", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
-  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called at breakfast /phoned the tourist, /and it /was absolutely true.",a : "x-x-x apart mid jobs eat along how yeah yours stupid same reduction sexism door jointly, ago vs pre depression cent." , n : "CLAIM", q : "? The tourist was phoned by the ______?", unselected_verb : "amazed", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
+  continuations238[6].push({item : "238_Critical_VN7", s : "that the local who the guide called at breakfast /phoned the tourist, /and it /was absolutely true.",a : "x-x-x apart mid jobs eat along how yeah yours stupid same reduction sexism door jointly, ago vs pre depression cent." , n : "CLAIM", q : "The tourist was phoned by the ______?", unselected_verb : "amazed", q_ac : "local", q_aiS1 : "", q_aiS3 : "guide"})
   
   continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved deeply /astonished the director, /and it /appeared to be true.",a : "x-x-x yours sick cent miss aware ones pre suck civil defeat compendium bag provides, anti hill daughter heat app park.", n : "CLAIM", q : "The director was astonished by the ______?", unselected_verb : "welcomed", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
   continuations238[7].push({item : "238_Critical_VN8", s : "that the actor who the fans loved deeply /welcomed the director, /and it /appeared to be true.",a : "x-x-x yours sick cent miss aware ones pre suck civil defeat compendium bag provides, anti hill daughter heat app park." , n : "CLAIM", q : "The director was welcomed by the ______?", unselected_verb : "astonished", q_ac : "actor", q_aiS1 : "", q_aiS3 : "fans"})
@@ -743,13 +743,13 @@ if (!Array.prototype.includes) {
 	}
 	filler_words[filler_words.length-1] = filler_words[filler_words.length-1] + "."
 	filler_foils[filler_foils.length-1] = filler_foils[filler_foils.length-1] + "."
-	filler_regions.push(curr_regions[curr_regions.length-1])
-	filler_words.push(curr_words[curr_words.length-1])
-	filler_foils.push(curr_words[curr_foils.length-1])
+	filler_regions.push("REGION_CQ")
+	filler_words.push(".")
+	filler_foils.push(".")
 	curr_item.s = filler_words.join(" ")
 	curr_item.r = filler_regions.join(" ")
 	curr_item.a = filler_foils.join(" ")
-	curr_item.condition = 'control_filler' + curr_item.condition
+	curr_item.condition = 'control_filler_' + curr_item.condition
 	control_fillers.push(curr_item)
   }
 
