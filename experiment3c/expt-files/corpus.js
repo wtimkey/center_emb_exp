@@ -708,8 +708,9 @@ if (!Array.prototype.includes) {
 	"critical_single_compatible" : false,
 	"critical_double_compatible" : false,
 }
+
   control_fillers = [];
-  for (i=0; i < continuationsChosen.length, i++;){
+  for (i=0; i < continuationsChosen.length; i++){
 	curr_item = JSON.parse(JSON.stringify(continuationsChosen[i]));
 	curr_condition = curr_item.condition;
 	use_n1_subj = control_filler_condition_ordering[curr_condition] & (!control_filler_condition_seen[curr_condition])
@@ -728,7 +729,7 @@ if (!Array.prototype.includes) {
 	filler_regions = ["REGION_D0", "REGION_N0"];
 	filler_words = ["The", curr_subj];
 	filler_foils = curr_foils.slice(0, 2);
-	for (j=0; j<curr_regions.length, j++;){
+	for (j=0; j<curr_regions.length; j++){
 		if((!curr_regions[j].startsWith("REGION_W0")) && (!curr_regions[j].startsWith("REGION_1")) && (!curr_regions[j].startsWith("REGION_3") && (!curr_regions[j].startsWith("REGION_4")))){
 			filler_regions.push(curr_regions[j])
 			if(curr_regions[j] == "REGION_2_0"){
