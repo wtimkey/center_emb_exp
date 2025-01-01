@@ -741,13 +741,19 @@ if (!Array.prototype.includes) {
 			filler_foils.push(curr_foils[j+2].replace(",", ""))
 		}
 	}
+	filler_words[filler_words.length-1] = filler_words[filler_words.length-1] + "."
+	filler_foils[filler_foils.length-1] = filler_foils[filler_foils.length-1] + "."
+	filler_regions.push(curr_regions[curr_regions.length-1])
+	filler_words.push(curr_words[curr_words.length-1])
+	filler_foils.push(curr_words[curr_foils.length-1])
 	curr_item.s = filler_words.join(" ")
 	curr_item.r = filler_regions.join(" ")
 	curr_item.a = filler_foils.join(" ")
+	curr_item.condition = 'control_filler' + curr_item.condition
 	control_fillers.push(curr_item)
   }
 
-  //todo: fix comp questions of these fillers by swapping the verb; and fix answers so that correct answer is actually correct
+  //todo: fix comp questions of these fillers by swapping the verb; and fix answers so that correct answer is actually correct, add compq region to end
   
   
   
