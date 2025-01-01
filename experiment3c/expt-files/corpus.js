@@ -750,7 +750,7 @@ if (!Array.prototype.includes) {
 	curr_item.r = filler_regions.join(" ");
 	curr_item.a = filler_foils.join(" ");
 	curr_item.q = curr_item.q.split(' ');
-	curr_item.q = curr_item.q.slice(0, curr_item.q.length-4) + [curr_verb] + curr_item.q.slice(curr_item.q.length-3, curr_item.q.length-1);
+	curr_item.q = curr_item.q.slice(0, curr_item.q.length-4).concat([curr_verb], curr_item.q.slice(curr_item.q.length-3, curr_item.q.length));
 	curr_item.q = curr_item.q.join(" ");
 	if(use_n1_subj){
 		og_n2 = curr_item.q_ac;
